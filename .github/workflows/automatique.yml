@@ -20,7 +20,11 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libeccodes-dev libeccodes-tools
-
+          
+      - name: Installer les packages R nécessaires
+        run: |
+          Rscript -e "install.packages(c('tidyverse','httr', 'jsonlite'), repos = 'https://cloud.r-project.org')"
+          
       - name: Exécuter le script R
         run: Rscript script.R
 
