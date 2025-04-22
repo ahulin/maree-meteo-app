@@ -25,10 +25,10 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
-            tidyverse
-            lubridate
+            #tidyverse
+            #lubridate
             httr
-            rvest
+            #rvest
             jsonlite
             # ajoute ici ce que tu veux
 
