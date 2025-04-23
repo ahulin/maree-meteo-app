@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le dépôt
-        uses: actions/checkout@v3
       - name: Récupérer le dépôt avec droits push
         uses: actions/checkout@v3
         with:
