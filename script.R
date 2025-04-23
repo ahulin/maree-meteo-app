@@ -18,7 +18,7 @@ cmt$login(user, pwd)
 #  Créer un dossier pour recevoir les fichiers
 dir.create("data_maree", showWarnings = FALSE)
 
-date_min<-format(Sys.Date()-6,"%Y-%m-%dT23:00:00")
+date_min<-format(Sys.Date()-6,"%Y-%m-%dT00:00:00")
 date_max<-format(Sys.Date()+7,"%Y-%m-%dT23:00:00")
 
 # 📥 Téléchargement des données
@@ -40,7 +40,6 @@ cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 
 library(terra)
-
 
 spots<-data.frame(
   id=c("aytre","saint_trojan","hossegor"),
@@ -65,9 +64,19 @@ points_vect <- vect(spots, geom = c("lon", "lat"), crs = crs(zos_stack))
 valeurs <- extract(zos_stack, points_vect)
 
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
-valeurs$id <- points_vect$id[valeurs$ID]
+valeurs$spot <- points_vect$id[valeurs$ID]
+
+library(tidyr)
+data_long <- valeurs %>%
+  pivot_longer(
+    cols = -c(spot,ID), names_to = c("heure", "mesure"),
+    names_sep = "[^[:alnum:]]+", values_to = "maree")
+data_long$date<-rep(time(zos_stack),3)
+
+data_long$jour<-format(data_long$date,"%Y-%m-%d")
+data_long$heure<-format(data_long$date,"%H")
 
 #exporte le csv
-write.csv(valeurs,"zos_points.csv",row.names=FALSE)
+write.csv(valeurs,"data_long.csv",row.names=FALSE)
 
 
