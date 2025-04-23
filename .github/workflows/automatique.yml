@@ -19,7 +19,7 @@ jobs:
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'  # Version compatible avec reticulate
+          python-version: '3.10' 
 
       - name: Installer les packages Python nécessaires
         run: |
