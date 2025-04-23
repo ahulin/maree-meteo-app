@@ -40,3 +40,11 @@ jobs:
           CMEMS_USER: ${{ secrets.CMEMS_USER }}
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
         run: Rscript script.R
+
+      - name: Commit du fichier CSV généré
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add zos_points.csv
+          git commit -m "Ajout automatique du CSV avec les hauteurs de mer" || echo "Aucun changement à committer"
+          git push
