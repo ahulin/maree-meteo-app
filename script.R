@@ -1,16 +1,15 @@
 # Chargement de reticulate
 library(reticulate)
 
-# Utiliser le Python global (où le package a été installé dans le YAML)
-use_python("/usr/bin/python3", required = TRUE)
+# 👉 Chemin vers le Python configuré dans GitHub Actions
+use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
+
+# Ensuite on importe le module copernicusmarine
+cmt <- import("copernicusmarine")
 
 #  Récupération des identifiants depuis les variables d'environnement GitHub Actions
 user <- Sys.getenv("CMEMS_USER")
 pwd  <- Sys.getenv("CMEMS_PWD")
-
-# Importer la librairie Python Copernicus Marine Toolbox
-reticulate::use_virtualenv("CopernicusMarine", required = TRUE) 
-cmt <- import("copernicusmarine")
 
 
 # Se connecter à Copernicus Marine
