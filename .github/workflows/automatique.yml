@@ -2,8 +2,8 @@ name: Script quotidien marée et météo
 
 on:
   schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
+    - cron: '0 6 * * *'  # Tous les jours à 6h UTC (8h France)
+  workflow_dispatch:       # Permet aussi de le lancer à la main
 
 jobs:
   run-script:
@@ -19,16 +19,19 @@ jobs:
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' 
+          python-version: '3.10'
 
       - name: Installer les packages Python nécessaires
         run: |
           python -m pip install --upgrade pip
-          pip install copernicusmarine virtualenv
+          pip install copernicusmarine
 
       - name: Installer les packages R nécessaires
         run: |
           Rscript -e "install.packages(c('reticulate'), repos = 'https://cloud.r-project.org')"
 
-      - name: Exécuter le script R avec reticulate
+      - name: Exécuter le script R
+        env:
+          CMEMS_USER: ${{ secrets.CMEMS_USER }}
+          CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
         run: Rscript script.R
