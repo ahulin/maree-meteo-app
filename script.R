@@ -57,7 +57,7 @@ fich<-fichs[ctime==max(ctime)]
 
 # Charger la variable 'zos' comme SpatRaster
 # variable zos : sea_surface_height_above_geoid
-zos_stack <- rast(paste0("./data/",fich), subds = "zos")
+zos_stack <- rast(paste0("./data_maree/",fich), subds = "zos")
 
 points_vect <- vect(spots, geom = c("lon", "lat"), crs = crs(zos_stack))
 
