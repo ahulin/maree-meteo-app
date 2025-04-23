@@ -68,6 +68,6 @@ valeurs <- extract(zos_stack, points_vect)
 valeurs$id <- points_vect$id[valeurs$ID]
 
 #exporte le csv
-write.csv(valeurs,"./data/maree.csv",row.names=FALSE)
+write.csv(valeurs,"zos_points.csv",row.names=FALSE)
 
 
