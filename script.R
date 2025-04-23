@@ -48,7 +48,7 @@ spots<-data.frame(
   lon=c(-1.130,-1.2486,-1.4429)
 )
 # on s'assure qu'on est sur mer et pas sur terre
-spots$lon<-spots$lon-0.01
+spots$lon<-spots$lon-0.05
 
 # on cherche le fichier le plus récent
 fichs<-list.files("./data_maree")
