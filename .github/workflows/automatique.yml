@@ -43,7 +43,7 @@ jobs:
             libudunits2-dev
       - name: Installer les packages R nécessaires
         run: |
-          Rscript -e "install.packages(c('reticulate','terra'), repos = 'https://cloud.r-project.org')"
+          Rscript -e "install.packages(c('reticulate','terra','tidyr'), repos = 'https://cloud.r-project.org')"
 
       - name: Exécuter le script R
         env:
