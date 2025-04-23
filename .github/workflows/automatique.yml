@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Récupérer le dépôt
         uses: actions/checkout@v3
+      - name: Récupérer le dépôt avec droits push
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Installer R
         uses: r-lib/actions/setup-r@v2
