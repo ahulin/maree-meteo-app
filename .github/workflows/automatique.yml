@@ -30,7 +30,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install copernicusmarine
-
+          
+      - name: Installer les dépendances système pour terra
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgdal-dev \
+            libproj-dev \
+            libgeos-dev \
+            libudunits2-dev
       - name: Installer les packages R nécessaires
         run: |
           Rscript -e "install.packages(c('reticulate','terra'), repos = 'https://cloud.r-project.org')"
