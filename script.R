@@ -77,6 +77,6 @@ data_long$jour<-format(data_long$date,"%Y-%m-%d")
 data_long$heure<-format(data_long$date,"%H")
 
 #exporte le csv
-write.csv(data_long,"data_long.csv",row.names=FALSE)
+write.csv(data_long,"zos_points.csv",row.names=FALSE)
 
 
