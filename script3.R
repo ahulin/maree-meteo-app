@@ -124,7 +124,145 @@ write.csv(data_long,"zos_points.csv",row.names=FALSE)
 
 ##################################### ECMWF ################################################################
 
+#' url_exists
+#'
+#' @param x a single URL
+#' @param non_2xx_return_value what to do if the site exists but the
+#'        HTTP status code is not in the `2xx` range. Default is to return `FALSE`.
+#' @param quiet if not `FALSE`, then every time the `non_2xx_return_value` condition
+#'        arises a warning message will be displayed. Default is `FALSE`.
+#' @param ... other params (`timeout()` would be a good one) passed directly
+#'        to `httr::HEAD()` and/or `httr::GET()`
+#' @return
+#' @export
+#' @examples
+#' \dontrun{
+#' c("http://google.com","http://atmo-na.org") -> some_urls
+#' data.frame(
+#'  exists = sapply(some_urls, url_exists, USE.NAMES = FALSE),
+#'  some_urls,
+#'  stringsAsFactors = FALSE
+#' ) %>% dplyr::tbl_df() %>% print()
+#' }
+url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
+{
+  
+  suppressPackageStartupMessages({
+    require("httr", quietly = FALSE, warn.conflicts = FALSE)
+  })
+  
+  # you don't need thse two functions if you're alread using `purrr`
+  # but `purrr` is a heavyweight compiled pacakge that introduces
+  # many other "tidyverse" dependencies and this doesnt.
+  
+  capture_error <- function(code, otherwise = NULL, quiet = TRUE) {
+    tryCatch(
+      list(result = code, error = NULL),
+      error = function(e) {
+        if (!quiet)
+          message("Error: ", e$message)
+        
+        list(result = otherwise, error = e)
+      },
+      interrupt = function(e) {
+        stop("Terminated by user", call. = FALSE)
+      }
+    )
+  }
+  
+  safely <- function(.f, otherwise = NULL, quiet = TRUE) {
+    function(...) capture_error(.f(...), otherwise, quiet)
+  }
+  
+  sHEAD <- safely(httr::HEAD)
+  sGET <- safely(httr::GET)
+  
+  # Try HEAD first since it's lightweight
+  res <- sHEAD(x, ...)
+  
+  if (is.null(res$result) ||
+      ((httr::status_code(res$result) %/% 200) != 1)) {
+    
+    res <- sGET(x, ...)
+    
+    if (is.null(res$result)) return(NA) # or whatever you want to return on "hard" errors
+    
+    if (((httr::status_code(res$result) %/% 200) != 1)) {
+      if (!quiet) warning(sprintf("Requests for [%s] responded but without an HTTP status code in the 200-299 range", x))
+      return(non_2xx_return_value)
+    }
+    
+    return(TRUE)
+    
+  } else {
+    return(TRUE)
+  }
+  
+}
 
+
+
+
+library(httr)
+library(rvest)
+token <- "Sys.getenv("DATA_PUSH_TOKEN")
+
+
+url <- "https://raw.githubusercontent.com/ahulin/maree-meteo-app/main/ecmwf_app.R"
+res <- GET(url, add_headers(Authorization = paste("token", token)))
+eval(parse(text = content(res, "text")))
+
+jour_ech<-format(Sys.Date(),"%Y-%m-%d")
+premiere_heure<-0
+nheure<-200 
+     
+     # on regarde quelles sont les run disponibles sur le serveur
+     ech_IFS<-NULL
+     ech_IFS<-get_echeances_dispo(filiere="ecpds",modele="ifs",type="oper")
+     
+     # on regarde ce qu'il existe (ou pas) pour la journée d'aujourd'hui comme run
+     echtoday<-subset(ech_IFS,date==Sys.Date())
+     
+     # si la donnée du jour est dispo on prend la plus recente, sinon on prend la plus récente la veille
+     
+     if (nrow(echtoday)==1) {
+       date_run_<-format(Sys.Date(),"%Y-%m-%d")
+       heure_run<-max(echtoday$heure_run)
+     } else
+     {
+       date_run_<-format(Sys.Date()-1,"%Y-%m-%d")
+       heure_run<-"18"
+       premiere_heure<-premiere_heure+6
+       nheure<-nheure+6
+     }
+     
+     data<-NULL
+     #1 - traitement par echéance
+     
+     message(" ################ TRAITEMENT DE l'echeance  #################### ")
+     for (h in seq(premiere_heure,nheure,3))
+     {
+       print(paste0("Heure :",h))
+       
+       data_h<-NULL
+       # on télécharge le fichier le d'heure demandée
+       
+       #  Créer un dossier pour recevoir les fichiers
+       dir.create("data_meteo", showWarnings = FALSE)
+       
+       fichier_grib2<- download_meteo_ecmwf_forecast(date_run=date_run_,run_hour=heure_run,filiere="ecpds",type="oper",step=h,modele="ifs",destination_dir ="./data_meteo")
+       # on fait l'extraction au niveau des points des stations
+       niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
+       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=villes,niveaux=niveaux_,destination_dir ="./data_meteo")
+       # calcul de l'heure et de la date du run
+       dateheure_run<-paste0(fichier_grib2[3]," ",fichier_grib2[2],":00")
+       data_h$date_run<-as.POSIXct( strptime(dateheure_run,"%Y-%m-%d %H:%M"))
+       # on ajoute la date et heure de l'échéance
+       data_h$date_ech<-data_h$date_run+h*60*60
+       data<-rbind(data,data_h)
+     }
+     
+     write.csv(data,"datameteo.csv",row.names=FALSE)
 
 
 
