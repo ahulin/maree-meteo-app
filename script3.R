@@ -208,12 +208,45 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
 
 library(httr)
 library(rvest)
+library(jsonlite)
+
 token <- Sys.getenv("DATA_PUSH_TOKEN")
 
 
-url <- "https://raw.githubusercontent.com/ahulin/maree-meteo-app/main/ecmwf_app.R"
-res <- GET(url, add_headers(Authorization = paste("token", token)))
-eval(parse(text = content(res, "text")))
+# L'API GitHub pour récupérer un fichier contenu dans un dépôt privé
+url <- "https://api.github.com/repos/ahulin/maree-meteo-app/contents/ecmwf_app.R"
+
+# Requête authentifiée
+res <- GET(
+  url,
+  add_headers(Authorization = paste("token", token),
+              Accept = "application/vnd.github.v3.raw")
+)
+
+# Vérification que tout s'est bien passé
+if (res$status_code == 200) {
+  content_json <- content(res, as = "parsed", type = "application/json")
+  
+  # Le contenu est encodé en base64 ➔ on le décode
+  script_text <- rawToChar(base64enc::base64decode(content_json$content))
+  
+  # Exécuter le script
+  eval(parse(text = script_text))
+  
+  cat("✅ Script chargé et exécuté avec succès\n")
+  
+} else {
+  stop(paste("❌ Impossible de récupérer le fichier :", res$status_code))
+}
+
+
+
+
+
+
+
+
+
 
 jour_ech<-format(Sys.Date(),"%Y-%m-%d")
 premiere_heure<-0
