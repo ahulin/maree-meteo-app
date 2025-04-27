@@ -40,9 +40,9 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   grib_file<-destination_path <-grib2_file
 
   # Forcer le chemin vers eccodes sous GitHub Actions
-if (Sys.info()["sysname"] == "Linux") {
+
   Sys.setenv(PATH = paste("/home/runner/conda/bin", Sys.getenv("PATH"), sep = ":"))
-}
+
 
 
 
