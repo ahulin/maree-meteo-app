@@ -49,7 +49,7 @@ jobs:
         env:
           CMEMS_USER: ${{ secrets.CMEMS_USER }}
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
-        run: Rscript script.R
+        run: Rscript script2.R
 
       - name: Commit du fichier CSV généré
         run: |
