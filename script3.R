@@ -253,7 +253,7 @@ nheure<-200
        fichier_grib2<- download_meteo_ecmwf_forecast(date_run=date_run_,run_hour=heure_run,filiere="ecpds",type="oper",step=h,modele="ifs",destination_dir ="./data_meteo")
        # on fait l'extraction au niveau des points des stations
        niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
-       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=villes,niveaux=niveaux_,destination_dir ="./data_meteo")
+       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_,destination_dir ="./data_meteo")
        # calcul de l'heure et de la date du run
        dateheure_run<-paste0(fichier_grib2[3]," ",fichier_grib2[2],":00")
        data_h$date_run<-as.POSIXct( strptime(dateheure_run,"%Y-%m-%d %H:%M"))
