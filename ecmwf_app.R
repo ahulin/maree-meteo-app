@@ -41,7 +41,8 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   grib_file<-destination_path <-grib2_file
 
   # Forcer le chemin vers eccodes sous GitHub Actions
-
+chemin_eccodes<-dirname(system("where grib_to_netcdf", intern = TRUE)) 
+  message(paste0("ici : ",chemin_eccodes))
   Sys.setenv(PATH = paste("/usr/share/miniconda/Library/bin", Sys.getenv("PATH"), sep = ":"))
 
 
