@@ -24,13 +24,13 @@
 #' fichier_grib2<- download_meteo_ecmwf_forecast(date_run=NULL,run_hour=NULL,filiere="forecast",step=0,modele="ifs",type="oper")
 #' d<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=villes,niveaux="soilLayer")
 #' }
-traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),destination_dir = "N:/4_developpements/COPERNICUS/ECMWF",niveaux=c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere"))
+traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),destination_dir = NULL,niveaux=c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere"))
 {
-  library(RPostgres)
+ 
   library(ncdf4)
   library(terra)
   library(raster)
-  library(PollensCpt)
+
   ##################conn = #################### traitement du grib2 téléchargé  avec eccodes #####################
   # eccodes doit avoir au préalable été installé avec la commande suivante :
 
@@ -40,11 +40,13 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   grib_file<-destination_path <-grib2_file
 
   # on indique le bon chemin où trouver l'installation de eccodes
-  #chemin_eccodes<-dirname(system("where grib_to_netcdf", intern = TRUE)) # permet de savoir où eccodes a été installé et définir le path en fonction
-  chemin_eccodes<-"C:\\Users\\ahulin\\AppData\\Local\\r-miniconda\\Library\\bin\\"
-
-  Sys.setenv(PATH = paste(chemin_eccodes, Sys.getenv("PATH"), sep = ";"))
-
+  chemin_eccodes <- if (.Platform$OS.type == "windows") {
+  "C:\\Users\\ahdddn\\AppData\\Local\\r-miniconda\\Library\\bin\\"
+} else {
+  "/usr/bin/"
+}
+sep_path <- if (.Platform$OS.type == "windows") ";" else ":"
+Sys.setenv(PATH = paste(chemin_eccodes, Sys.getenv("PATH"), sep = sep_path))
 
   #les infos ont été prises ici pour la suite : https://confluence.ecmwf.int/display/OIFS/How+to+convert+GRIB+to+netCDF
 
@@ -120,6 +122,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
                                                   level=niv,
                                                   sublevel=sub_level
       ))
+      
     } # fin de for var2
     nc<-nc_close(nc)
 
