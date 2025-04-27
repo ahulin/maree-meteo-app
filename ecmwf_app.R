@@ -42,7 +42,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
 
   # Forcer le chemin vers eccodes sous GitHub Actions
 
-  Sys.setenv(PATH = paste("/home/runner/miniconda3/bin/", Sys.getenv("PATH"), sep = ":"))
+  Sys.setenv(PATH = paste("/usr/share/miniconda/condabin", Sys.getenv("PATH"), sep = ":"))
 
 
 
