@@ -55,10 +55,6 @@ jobs:
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
           PATH: /usr/share/miniconda/Library/bin:${{ env.PATH }}
         run: |
-          # Petit check visuel avant pour être sûr que grib_copy est là :
-          which grib_copy
-          which grib_to_netcdf
-          
           Rscript script3.R
 
       - name: Commit des fichiers CSV générés
