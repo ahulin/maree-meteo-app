@@ -1,3 +1,8 @@
+
+##################################### COPERNICUS MARINE ################################################################
+
+
+
 # Chargement de reticulate
 library(reticulate)
 
@@ -112,3 +117,14 @@ data_long$heure<-substr(data_long$date_paris,12,13)
 
 #exporte le csv
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
+
+
+
+
+
+##################################### ECMWF ################################################################
+
+
+
+
+
