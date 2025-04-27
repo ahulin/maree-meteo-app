@@ -6,6 +6,8 @@
 # Chargement de reticulate
 library(reticulate)
 
+pas_de_temps=heure # ou quart_heure
+
 # 👉 Chemin vers le Python configuré dans GitHub Actions
 use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
 
@@ -27,9 +29,12 @@ dir.create("data_maree", showWarnings = FALSE)
 date_min<-format(Sys.Date()-6,"%Y-%m-%dT00:00:00")
 date_max<-format(Sys.Date()+10,"%Y-%m-%dT23:00:00")
 
+if (pas_de_temps=='heure') {data_id<-"cmems_mod_ibi_phy_anfc_0.027deg-2D_PT1H-m" } else 
+ {data_id<- "cmems_mod_ibi_phy_anfc_0.027deg-2D_PT15M-i" } 
+
 # 📥 Téléchargement des données
 d<-cmt$subset(
-  dataset_id = "cmems_mod_ibi_phy_anfc_0.027deg-2D_PT1H-m",
+  dataset_id = data_id,
   #variables = list("mlotst", "thetao", "ubar", "uo", "vbar", "vo", "zos"),
   variables = list("zos"),
   minimum_longitude=-5.6566816,
@@ -54,7 +59,6 @@ spots<-data.frame(
 )
 # on s'assure qu'on est sur mer et pas sur terre
 spots$lon<-spots$lon-0.05
-points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
 
 
 # on cherche le fichier le plus récent
@@ -79,7 +83,7 @@ max_lat <- d$coordinates_extent[[2]]$maximum
 crs(zos_stack) <- "EPSG:4326"
 
 # Forcer l'extent
-ext(zos_stack) <- c(min_lon, max_lon, min_lat, max_lat)
+terra::ext(zos_stack) <- c(min_lon, max_lon, min_lat, max_lat)
 
 
 #construire la date
@@ -93,13 +97,12 @@ datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
 
 
 # Extraire les valeurs de chaque couche (temps) pour chaque point
-valeurs <- extract(zos_stack, points_vect)
+valeurs <- terra::extract(zos_stack, spots[, c("lon", "lat")])
 
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
-valeurs$spot <- points_vect$id[valeurs$ID]
+valeurs$spot <- spots$id[valeurs$ID]
 
 library(tidyr)
-#data_long <- valeurs %>%
 #  pivot_longer(
 #    cols = -c(spot,ID), names_to = c("heure", "mesure"),
 #    names_sep = "[^[:alnum:]]+", values_to = "maree")
@@ -178,12 +181,13 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
   sGET <- safely(httr::GET)
   
   # Try HEAD first since it's lightweight
-  res <- sHEAD(x, ...)
+  #res <- sHEAD(x, ...)
+  res <-sHEAD(x, timeout(10))
   
   if (is.null(res$result) ||
       ((httr::status_code(res$result) %/% 200) != 1)) {
     
-    res <- sGET(x, ...)
+    res <- sGET(x, timeout(10))
     
     if (is.null(res$result)) return(NA) # or whatever you want to return on "hard" errors
     
@@ -205,7 +209,7 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
 
 library(httr)
 library(rvest)
-token <- "Sys.getenv("DATA_PUSH_TOKEN")
+token <- Sys.getenv("DATA_PUSH_TOKEN")
 
 
 url <- "https://raw.githubusercontent.com/ahulin/maree-meteo-app/main/ecmwf_app.R"
@@ -240,6 +244,11 @@ nheure<-200
      #1 - traitement par echéance
      
      message(" ################ TRAITEMENT DE l'echeance  #################### ")
+
+
+       #  Créer un dossier pour recevoir les fichiers
+       dir.create("data_meteo", showWarnings = FALSE)
+
      for (h in seq(premiere_heure,nheure,3))
      {
        print(paste0("Heure :",h))
@@ -247,8 +256,7 @@ nheure<-200
        data_h<-NULL
        # on télécharge le fichier le d'heure demandée
        
-       #  Créer un dossier pour recevoir les fichiers
-       dir.create("data_meteo", showWarnings = FALSE)
+
        
        fichier_grib2<- download_meteo_ecmwf_forecast(date_run=date_run_,run_hour=heure_run,filiere="ecpds",type="oper",step=h,modele="ifs",destination_dir ="./data_meteo")
        # on fait l'extraction au niveau des points des stations
