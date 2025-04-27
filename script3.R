@@ -1,3 +1,15 @@
+# Détecter automatiquement le chemin de grib_copy
+chemin_grib_copy <- system("which grib_copy", intern = TRUE)
+
+# Extraire le dossier uniquement (sans grib_copy à la fin)
+chemin_eccodes <- dirname(chemin_grib_copy)
+
+# Ajouter dans le PATH
+Sys.setenv(PATH = paste(chemin_eccodes, Sys.getenv("PATH"), sep = ":"))
+
+# Test rapide pour vérifier que ça marche
+system("grib_copy -h")
+
 
 ##################################### COPERNICUS MARINE ################################################################
 
@@ -268,7 +280,7 @@ nheure<-200
        fichier_grib2<- download_meteo_ecmwf_forecast(date_run=date_run_,run_hour=heure_run,filiere="ecpds",type="oper",step=h,modele="ifs",destination_dir ="./data_meteo")
        # on fait l'extraction au niveau des points des stations
        niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
-       Sys.setenv(PATH = paste("/usr/bin", Sys.getenv("PATH"), sep = ":"))
+       Sys.setenv(PATH = paste(chemin_eccodes, Sys.getenv("PATH"), sep = ":"))
        data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_,destination_dir ="./data_meteo")
        # calcul de l'heure et de la date du run
        dateheure_run<-paste0(fichier_grib2[3]," ",fichier_grib2[2],":00")
