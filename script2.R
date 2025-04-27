@@ -108,4 +108,4 @@ data_long$jour<-substr(data_long$date_paris,1,10)
 data_long$heure<-substr(data_long$date_paris,12,13)
 
 #exporte le csv
-write.csv(valeurs,"zos_points.csv",row.names=FALSE)
+write.csv(data_long,"zos_points.csv",row.names=FALSE)
