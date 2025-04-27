@@ -40,13 +40,15 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   grib_file<-destination_path <-grib2_file
 
   # on indique le bon chemin où trouver l'installation de eccodes
-  chemin_eccodes <- if (.Platform$OS.type == "windows") {
-  "C:\\Users\\ahdddn\\AppData\\Local\\r-miniconda\\Library\\bin\\"
-} else {
-  "/usr/bin/"
-}
-sep_path <- if (.Platform$OS.type == "windows") ";" else ":"
-Sys.setenv(PATH = paste(chemin_eccodes, Sys.getenv("PATH"), sep = sep_path))
+ # Détecter automatiquement le chemin de grib_copy
+chemin_grib_copy <- system("which grib_copy", intern = TRUE)
+
+# Extraire le dossier uniquement (sans grib_copy à la fin)
+chemin_eccodes <- dirname(chemin_grib_copy)
+
+# Ajouter dans le PATH
+Sys.setenv(PATH = paste(chemin_eccodes, Sys.getenv("PATH"), sep = ":"))
+
 
   #les infos ont été prises ici pour la suite : https://confluence.ecmwf.int/display/OIFS/How+to+convert+GRIB+to+netCDF
 
