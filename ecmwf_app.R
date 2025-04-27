@@ -27,7 +27,7 @@
 traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),destination_dir = NULL,
                                niveaux=c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere"))
 {
- 
+ message(grib2_file)
   library(ncdf4)
   library(terra)
   library(raster)
