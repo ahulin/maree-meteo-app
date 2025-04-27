@@ -23,24 +23,22 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Installer Miniconda + eccodes
+      - name: Installer Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
+          activate-environment: false
           python-version: "3.10"
-          environment-name: r-env
-          activate-environment: r-env
           channels: conda-forge
-          packages: eccodes
+
+      - name: Installer eccodes via conda
+        run: |
+          conda install -c conda-forge eccodes -y
 
       - name: Installer les dépendances système pour R
         run: |
           sudo apt-get update
-          sudo apt-get install -y libpng-dev
-
-      - name: Installer les dépendances système pour terra
-        run: |
-          sudo apt-get install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev
+          sudo apt-get install -y libpng-dev libgdal-dev libproj-dev libgeos-dev libudunits2-dev
 
       - name: Installer les packages Python nécessaires
         run: |
