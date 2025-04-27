@@ -44,7 +44,7 @@ jobs:
 
       - name: Installer les packages R nécessaires
         run: |
-          Rscript -e "install.packages(c('reticulate','terra','tidyr'), repos = 'https://cloud.r-project.org')"
+          Rscript -e "install.packages(c('reticulate','terra','tidyr','httr','rvest','ncdf4','raster','dplyr','stringr'), repos = 'https://cloud.r-project.org')"
 
       - name: Exécuter le script R
         env:
