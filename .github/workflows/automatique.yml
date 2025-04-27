@@ -1,10 +1,3 @@
-name: Script quotidien marée et météo
-
-on:
-  schedule:
-    - cron: '0 6 * * *'  # Tous les jours à 6h UTC
-  workflow_dispatch:
-
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -23,24 +16,24 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Installer Miniconda + eccodes
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          python-version: "3.10"
+          environment-name: r-env
+          activate-environment: r-env
+          channels: conda-forge
+          packages: eccodes
+
       - name: Installer les dépendances système pour R
         run: |
           sudo apt-get update
           sudo apt-get install -y libpng-dev
 
-      - name: Installer eccodes pour traitement des fichiers GRIB
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y eccodes libeccodes-dev
-
       - name: Installer les dépendances système pour terra
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libgdal-dev \
-            libproj-dev \
-            libgeos-dev \
-            libudunits2-dev
+          sudo apt-get install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev
 
       - name: Installer les packages Python nécessaires
         run: |
@@ -57,22 +50,3 @@ jobs:
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
           DATA_PUSH_TOKEN: ${{ secrets.DATA_PUSH_TOKEN }}
         run: Rscript script3.R
-
-      - name: Commit des fichiers CSV générés
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add zos_points.csv data_meteo.csv
-          git commit -m "Ajout automatique des CSV (hauteurs de mer + météo)" || echo "Aucun changement à committer"
-          git push
-
-      - name: Push vers dépôt privé maree-donnees
-        run: |
-          git clone https://x-access-token:${{ secrets.DATA_PUSH_TOKEN }}@github.com/ahulin/maree-donnees.git data-push
-          cp zos_points.csv data_meteo.csv data-push/
-          cd data-push
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add zos_points.csv data_meteo.csv
-          git commit -m "Mise à jour quotidienne des fichiers CSV (hauteurs de mer + météo)" || echo "Pas de changement"
-          git push
