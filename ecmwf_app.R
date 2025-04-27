@@ -24,7 +24,8 @@
 #' fichier_grib2<- download_meteo_ecmwf_forecast(date_run=NULL,run_hour=NULL,filiere="forecast",step=0,modele="ifs",type="oper")
 #' d<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=villes,niveaux="soilLayer")
 #' }
-traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),destination_dir = NULL,niveaux=c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere"))
+traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),destination_dir = NULL,
+                               niveaux=c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere"))
 {
  
   library(ncdf4)
@@ -41,7 +42,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
 
   # Forcer le chemin vers eccodes sous GitHub Actions
 
-  Sys.setenv(PATH = paste("/home/runner/conda/bin", Sys.getenv("PATH"), sep = ":"))
+  Sys.setenv(PATH = paste("/home/runner/miniconda3/bin/", Sys.getenv("PATH"), sep = ":"))
 
 
 
