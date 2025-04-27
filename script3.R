@@ -213,28 +213,24 @@ library(jsonlite)
 token <- Sys.getenv("DATA_PUSH_TOKEN")
 
 
-# L'API GitHub pour récupérer un fichier contenu dans un dépôt privé
 url <- "https://api.github.com/repos/ahulin/maree-meteo-app/contents/ecmwf_app.R"
 
-# Requête authentifiée
+# Appel API
 res <- GET(
   url,
   add_headers(Authorization = paste("token", token),
               Accept = "application/vnd.github.v3.raw")
 )
 
-# Vérification que tout s'est bien passé
+# Lecture correcte du contenu
 if (res$status_code == 200) {
-  content_json <- content(res, as = "parsed", type = "application/json")
+  # Attention ici : récupérer en texte brut
+  script_text <- content(res, as = "text", encoding = "UTF-8")
   
-  # Le contenu est encodé en base64 ➔ on le décode
-  script_text <- rawToChar(base64enc::base64decode(content_json$content))
-  
-  # Exécuter le script
+  # Exécuter ton script
   eval(parse(text = script_text))
   
-  cat("✅ Script chargé et exécuté avec succès\n")
-  
+  cat("✅ Ton fichier ecmwf_app.R a été chargé et exécuté avec succès\n")
 } else {
   stop(paste("❌ Impossible de récupérer le fichier :", res$status_code))
 }
