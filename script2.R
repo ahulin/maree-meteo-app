@@ -23,7 +23,7 @@ date_min<-format(Sys.Date()-6,"%Y-%m-%dT00:00:00")
 date_max<-format(Sys.Date()+10,"%Y-%m-%dT23:00:00")
 
 # 📥 Téléchargement des données
-cmt$subset(
+d<-cmt$subset(
   dataset_id = "cmems_mod_ibi_phy_anfc_0.027deg-2D_PT1H-m",
   #variables = list("mlotst", "thetao", "ubar", "uo", "vbar", "vo", "zos"),
   variables = list("zos"),
@@ -49,11 +49,14 @@ spots<-data.frame(
 )
 # on s'assure qu'on est sur mer et pas sur terre
 spots$lon<-spots$lon-0.05
-points_vect <- vect(spots, geom = c("lon", "lat"), crs = crs(zos_stack))
+points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
 
 
 # on cherche le fichier le plus récent
 fichs<-list.files("./data_maree")
+
+if (length(fichs) == 0) stop("❌ Aucun fichier NC trouvé dans /data_maree")
+
 ctime<-file.info(paste0("./data_maree/",fichs))$ctime
 fich<-fichs[ctime==max(ctime)]
 
