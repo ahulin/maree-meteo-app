@@ -255,7 +255,7 @@ nom_fich_local<-sprintf("%s_%s_%s%s0000-%sh-%s-fc.grib2",
 url<-paste0(url_base,nom_fich)
 
 # on test l'existence du fichier sur le serveur
-if (!AnisTools::url_exists(url))
+if (!url_exists(url))
 {
   stop(paste0("Le fichier ",url," n'existe pas sur le serveur ecmwf "))
 }
@@ -333,7 +333,7 @@ get_echeances_dispo<-function(filiere="ecpds",modele="ifs",type="oper")
     url_theorique<-url_theorique[order(url_theorique$url),]
 
     # on regarde si l'url du chemin du dossier existe, et one garde que les url qui existent
-    url_theorique$exists <- sapply(url_theorique$url, AnisTools::url_exists)
+    url_theorique$exists <- sapply(url_theorique$url, url_exists)
     url_theorique<-subset(url_theorique,exists)
 
     # regarde si les fichiers ont ete cree, car meme si la page existe, ce nest pas forcement le cas des fichiers
