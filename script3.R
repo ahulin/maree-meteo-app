@@ -6,7 +6,7 @@
 # Chargement de reticulate
 library(reticulate)
 
-pas_de_temps=heure # ou quart_heure
+pas_de_temps="heure" # ou quart_heure
 
 # 👉 Chemin vers le Python configuré dans GitHub Actions
 use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
