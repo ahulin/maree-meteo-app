@@ -210,30 +210,9 @@ library(httr)
 library(rvest)
 library(jsonlite)
 
-token <- Sys.getenv("DATA_PUSH_TOKEN")
+source("ecmwf_app.R")
 
-
-url <- "https://api.github.com/repos/ahulin/maree-meteo-app/contents/ecmwf_app.R"
-
-# Appel API
-res <- GET(
-  url,
-  add_headers(Authorization = paste("token", token),
-              Accept = "application/vnd.github.v3.raw")
-)
-
-# Lecture correcte du contenu
-if (res$status_code == 200) {
-  # Attention ici : récupérer en texte brut
-  script_text <- content(res, as = "text", encoding = "UTF-8")
-  
-  # Exécuter ton script
-  eval(parse(text = script_text))
-  
-  cat("✅ Ton fichier ecmwf_app.R a été chargé et exécuté avec succès\n")
-} else {
-  stop(paste("❌ Impossible de récupérer le fichier :", res$status_code))
-}
+cat("✅ Le fichier ecmwf_app.R a été chargé directement depuis le dépôt cloné\n")
 
 
 
