@@ -270,9 +270,7 @@ nheure<-200
        # on fait l'extraction au niveau des points des stations
        niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
        # Forcer le chemin vers eccodes sous GitHub Actions
-if (Sys.info()["sysname"] == "Linux") {
-  Sys.setenv(PATH = paste("/home/runner/conda/bin", Sys.getenv("PATH"), sep = ":"))
-}
+
 
        data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_,destination_dir ="./data_meteo")
        # calcul de l'heure et de la date du run
