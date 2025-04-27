@@ -42,9 +42,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
 
   # Forcer le chemin vers eccodes sous GitHub Actions
 
-  Sys.setenv(PATH = paste("/usr/share/miniconda/condabin", Sys.getenv("PATH"), sep = ":"))
-
-
+  Sys.setenv(PATH = paste("/usr/share/miniconda/Library/bin", Sys.getenv("PATH"), sep = ":"))
 
 
   #les infos ont été prises ici pour la suite : https://confluence.ecmwf.int/display/OIFS/How+to+convert+GRIB+to+netCDF
