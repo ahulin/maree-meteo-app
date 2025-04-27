@@ -90,11 +90,6 @@ terra::ext(zos_stack) <- c(min_lon, max_lon, min_lat, max_lat)
 datemin <- as.POSIXct(d$coordinates_extent[[3]]$minimum, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
 datemax <-  as.POSIXct(d$coordinates_extent[[3]]$maximum, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
 
-# puis conversion vers Europe/Paris
-datemin_paris <- format(datemin, tz = "Europe/Paris", usetz = TRUE)
-datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
-
-
 
 # Extraire les valeurs de chaque couche (temps) pour chaque point
 valeurs <- terra::extract(zos_stack, spots[, c("lon", "lat")])
@@ -112,11 +107,15 @@ data_long <- valeurs %>%
   pivot_longer(
     cols = -c(spot,ID), names_to = c("date_UTC"),
     values_to = "maree")
-data_long$date_UTC<-rep(seq(datemin,datemax,by=60*60),3)
+if (pas_de_temps=="heure") {
+  data_long$date_UTC<-rep(seq(datemin,datemax,by=60*60),3)} else {
+ data_long$date_UTC<-rep(seq(datemin,datemax,by=60*15),3)
+ }
 data_long$date_paris<- format(data_long$date_UTC, tz = "Europe/Paris", usetz = TRUE)
 
 data_long$jour<-substr(data_long$date_paris,1,10)
 data_long$heure<-substr(data_long$date_paris,12,13)
+data_long$minute<-substr(data_long$date_paris,15,16)
 
 #exporte le csv
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
