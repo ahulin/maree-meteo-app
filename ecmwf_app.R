@@ -44,13 +44,13 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
 
   
   Sys.setenv(PATH = paste("/usr/share/miniconda/Library/bin", Sys.getenv("PATH"), sep = ":"))
-  chemin_eccodes<-dirname(system("where grib_to_netcdf", intern = TRUE)) 
-  message(paste0("ici : ",chemin_eccodes))
-  
+
   #les infos ont été prises ici pour la suite : https://confluence.ecmwf.int/display/OIFS/How+to+convert+GRIB+to+netCDF
 
   # on sépare les niveaux, un fichier grb par niveau
-  system(paste0("grib_copy ",destination_path," ",destination_dir,"/ICMGG_[typeOfLevel].grb"))
+res <- system(paste0("grib_copy ",destination_path," ",destination_dir,"/ICMGG_[typeOfLevel].grb"))
+if (res != 0) stop("❌ Erreur dans grib_copy")
+
 
 
   ##### à partir de là, on traite les fichiers niveaux par niveau ##########################
@@ -64,9 +64,11 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     # on converti les fichiers par niveau en ncdf (l'étape précédente est nécessaire pour le faire)
     #system("grib_to_netcdf -D NC_FLOAT -o C:/TEMP/ICMGG_surface.nc C:/TEMP/ICMGG_surface.grb")
     commande<-NULL
-    commande<-sprintf("grib_to_netcdf -D NC_FLOAT -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb",
-                      destination_dir,niv,destination_dir,niv)
-    system(commande)
+   commande <- sprintf("grib_to_netcdf -D NC_FLOAT -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
+   res <- system(commande)
+   if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
+
+  
 
     # on lit le ncdf
     fich_nc<-sprintf("%s/ICMGG_%s.nc",
