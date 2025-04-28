@@ -26,7 +26,6 @@ jobs:
       - name: Installer Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
-          auto-update-conda: true
           activate-environment: false
           python-version: "3.10"
           channels: conda-forge
