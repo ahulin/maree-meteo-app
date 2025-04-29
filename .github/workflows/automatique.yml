@@ -37,22 +37,20 @@ jobs:
       - name: Installer les dépendances système pour terra
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev
-
-      - name: Installer les dépendances système pour R
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libpng-dev
+          sudo apt-get install -y \
+            libgdal-dev \
+            libproj-dev \
+            libgeos-dev \
+            libudunits2-dev
 
       - name: Installer les packages R nécessaires
         run: |
-          Rscript -e "install.packages(c('reticulate','terra','tidyr','httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'), repos = 'https://cloud.r-project.org')"
+          Rscript -e "install.packages(c('reticulate','terra','tidyr'), repos = 'https://cloud.r-project.org')"
 
       - name: Exécuter le script R
         env:
           CMEMS_USER: ${{ secrets.CMEMS_USER }}
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
-          PATH: /usr/share/miniconda/Library/bin:${{ env.PATH }}
         run: |
           Rscript script3.R
 
