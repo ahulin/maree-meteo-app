@@ -61,6 +61,7 @@ jobs:
         env:
           CMEMS_USER: ${{ secrets.CMEMS_USER }}
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
+          PATH: /usr/share/miniconda/Library/bin:${{ env.PATH }}
         run: |
           Rscript script3.R
 
