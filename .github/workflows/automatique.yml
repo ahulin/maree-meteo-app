@@ -60,8 +60,7 @@ jobs:
       - name: Exécuter le script R
         env:
           CMEMS_USER: ${{ secrets.CMEMS_USER }}
-          CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
-          PATH: /usr/share/miniconda/Library/bin:${{ env.PATH }}
+          CMEMS_PWD: ${{ secrets.CMEMS_PWD 
         run: |
           Rscript script3.R
 
