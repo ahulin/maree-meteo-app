@@ -18,16 +18,33 @@ jobs:
       - name: Installer R
         uses: r-lib/actions/setup-r@v2
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
+      - name: Cache bibliothèque R
+        uses: actions/cache@v3
         with:
-          python-version: '3.10'
-
+          # Cible le dossier où R installe les paquets CRAN
+          path: ${{ env.R_LIBS_USER }}
+          # Se base sur le contenu de ton script pour savoir quand invalider le cache
+          key: ${{ runner.os }}-r-${{ hashFiles('script3.R') }}
+          restore-keys: |
+            ${{ runner.os }}-r-
+            
+      - name: Installer les packages R nécessaires
+        run: |
+          Rscript -e "install.packages(
+            c('reticulate','terra','tidyr','httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite','sp'),
+            repos='https://cloud.r-project.org'
+          )"
+          
       - name: Installer les dépendances système pour R
         run: |
           sudo apt-get update
           sudo apt-get install -y libpng-dev
-
+          
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
       - name: Installer les packages Python nécessaires
         run: |
           python -m pip install --upgrade pip
@@ -41,13 +58,6 @@ jobs:
             libproj-dev \
             libgeos-dev \
             libudunits2-dev
-    
-      - name: Installer les packages R nécessaires
-        run: |
-          Rscript -e "install.packages(
-            c('reticulate','terra','tidyr','httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'),
-            repos='https://cloud.r-project.org'
-          )"
 
       - name: Installer Python
         uses: actions/setup-python@v5
