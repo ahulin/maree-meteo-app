@@ -2,41 +2,57 @@ name: Script quotidien marée et météo
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Tous les jours à 6h UTC
+    - cron: '0 6 * * *'   # Tous les jours à 6h UTC
   workflow_dispatch:
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
 
+    # 🔑 Pour que conda activate fonctionne sur GitHub Actions
+    defaults:
+      run:
+        shell: bash -l {0}
+
     steps:
+      # 1) Checkout
       - name: Récupérer le dépôt
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # 2) Installer R
       - name: Installer R
         uses: r-lib/actions/setup-r@v2
 
+      # 3) Installer Python
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
+      # 4) Installer Miniconda (Mambaforge) et activer base
       - name: Installer Miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: "3.10"
           miniforge-variant: Mambaforge
           auto-update-conda: true
+          auto-activate-base: true
 
-      - name: Installer eccodes via conda
+      # 5) Installer eccodes via Mamba
+      - name: Installer eccodes
         run: |
-          conda install -c conda-forge eccodes -y
+          mamba install -c conda-forge eccodes -y
 
-      - name: Ajouter conda/bin au PATH
-        run: echo "/usr/share/miniconda/Library/bin" >> $GITHUB_PATH
+      # 6) Vérifier la présence de grib_copy
+      - name: Vérifier grib_copy
+        run: |
+          echo "🔎 which grib_copy:"
+          which grib_copy
+          grib_copy -h | head -n1
 
+      # 7) Dépendances système (terra + R)
       - name: Installer dépendances système
         run: |
           sudo apt-get update
@@ -44,11 +60,13 @@ jobs:
             libgdal-dev libproj-dev libgeos-dev libudunits2-dev \
             libpng-dev
 
+      # 8) Dépendances Python
       - name: Installer copernicusmarine
         run: |
-          python -m pip install --upgrade pip
+          pip install --upgrade pip
           pip install copernicusmarine
 
+      # 9) Dépendances R
       - name: Installer les packages R
         run: |
           Rscript -e "install.packages(c(
@@ -56,15 +74,23 @@ jobs:
             'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'
           ), repos='https://cloud.r-project.org')"
 
+      # 10) Exposer la librairie R custom à Rscript
+      - name: Exposer R_LIBS_USER
+        run: |
+          R_LIB=$(Rscript -e '.libPaths()[1]' --vanilla)
+          echo "R_LIBS_USER=${R_LIB}" >> $GITHUB_ENV
+
+      # 11) Exécuter ton script
       - name: Exécuter le script R
         env:
           CMEMS_USER:      ${{ secrets.CMEMS_USER }}
           CMEMS_PWD:       ${{ secrets.CMEMS_PWD }}
           DATA_PUSH_TOKEN: ${{ secrets.DATA_PUSH_TOKEN }}
-          PATH:            /usr/share/miniconda/Library/bin:${{ env.PATH }}
-        run: Rscript script3.R
+        run: |
+          Rscript script3.R
 
-      - name: Commit des fichiers CSV
+      # 12) Commit + push dans le dépôt principal
+      - name: Commit des CSV générés
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
@@ -72,13 +98,14 @@ jobs:
           git commit -m "Ajout automatique des CSV" || echo "Rien à committer"
           git push
 
+      # 13) Push vers le dépôt privé de données
       - name: Push vers maree-donnees
         run: |
           git clone https://x-access-token:${{ secrets.DATA_PUSH_TOKEN }}@github.com/ahulin/maree-donnees.git data-push
-          cp zos_points.csv data-meteo.csv data-push/
+          cp zos_points.csv data_meteo.csv data-push/
           cd data-push
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add zos_points.csv data_meteo.csv
-          git commit -m "Mise à jour des CSV" || echo "Rien à committer"
+          git commit -m "Mise à jour quotidienne des CSV" || echo "Rien à committer"
           git push
