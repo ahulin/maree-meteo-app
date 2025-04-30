@@ -25,10 +25,7 @@ jobs:
           )"
           
       - name: Exposer le chemin des librairies R
-        run: |
-          # Récupère la valeur courante de R_LIBS_USER
-          R_LIB_PATH=$(Rscript -e '.libPaths()[1]' --vanilla)
-          echo "R_LIBS_USER=${R_LIB_PATH}" >> $GITHUB_ENV
+        run: echo "/home/runner/work/_temp/Library" >> $GITHUB_PATH
           
       - name: Installer Python
         uses: actions/setup-python@v5
