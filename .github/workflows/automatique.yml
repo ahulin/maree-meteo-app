@@ -9,7 +9,8 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
 
-    # 🔑 Pour que conda activate fonctionne sur GitHub Actions
+    # Permet de lancer chaque 'run:' dans un shell login, 
+    # pour que micromamba s’active automatiquement
     defaults:
       run:
         shell: bash -l {0}
@@ -31,28 +32,24 @@ jobs:
         with:
           python-version: '3.10'
 
-      # 4) Installer Miniconda (Mambaforge) et activer base
-      - name: Installer Miniconda
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: "3.10"
-          miniforge-variant: Mambaforge
-          auto-update-conda: true
-          auto-activate-base: true
-
-      # 5) Installer eccodes via Mamba
-      - name: Installer eccodes
+      # 4) Installer micromamba (script officiel)
+      - name: Installer micromamba
         run: |
-          mamba install -c conda-forge eccodes -y
+          curl -L micro.mamba.pm/install.sh | bash
+      - name: Ajouter micromamba au PATH
+        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      # 6) Vérifier la présence de grib_copy
+      # 5) Installer eccodes via micromamba
+      - name: Installer eccodes
+        run: micromamba install -n base -c conda-forge eccodes -y
+
+      # 6) Vérifier que grib_copy est bien disponible
       - name: Vérifier grib_copy
         run: |
-          echo "🔎 which grib_copy:"
           which grib_copy
-          grib_copy -h | head -n1
+          grib_copy --help
 
-      # 7) Dépendances système (terra + R)
+      # 7) Dépendances système pour terra + R
       - name: Installer dépendances système
         run: |
           sudo apt-get update
@@ -74,31 +71,31 @@ jobs:
             'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'
           ), repos='https://cloud.r-project.org')"
 
-      # 10) Exposer la librairie R custom à Rscript
+      # 10) Exposer R_LIBS_USER pour Rscript
       - name: Exposer R_LIBS_USER
         run: |
           R_LIB=$(Rscript -e '.libPaths()[1]' --vanilla)
           echo "R_LIBS_USER=${R_LIB}" >> $GITHUB_ENV
 
-      # 11) Exécuter ton script
+      # 11) Exécution du script R principal
       - name: Exécuter le script R
         env:
           CMEMS_USER:      ${{ secrets.CMEMS_USER }}
           CMEMS_PWD:       ${{ secrets.CMEMS_PWD }}
           DATA_PUSH_TOKEN: ${{ secrets.DATA_PUSH_TOKEN }}
         run: |
-          Rscript script3.R
+          Rscript script2.R
 
-      # 12) Commit + push dans le dépôt principal
+      # 12) Commit & push sur le dépôt principal
       - name: Commit des CSV générés
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add zos_points.csv data_meteo.csv
-          git commit -m "Ajout automatique des CSV" || echo "Rien à committer"
+          git commit -m "Mise à jour automatique des CSV" || echo "Rien à committer"
           git push
 
-      # 13) Push vers le dépôt privé de données
+      # 13) Push vers dépôt privé de données
       - name: Push vers maree-donnees
         run: |
           git clone https://x-access-token:${{ secrets.DATA_PUSH_TOKEN }}@github.com/ahulin/maree-donnees.git data-push
