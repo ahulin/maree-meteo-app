@@ -63,7 +63,7 @@ jobs:
         run: |
           Rscript -e "install.packages(c(
             'reticulate','terra','tidyr',
-            'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'
+            'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite','sp'
           ), repos='https://cloud.r-project.org')"
 
       # 10) On expose la librairie R custom à Rscript (optionnel si tu veux forcer .libPaths())
