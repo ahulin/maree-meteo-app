@@ -71,7 +71,9 @@ jobs:
           conda install -c conda-forge eccodes -y
           
       - name: Ajouter eccodes au PATH global
-        run: echo "/usr/share/miniconda/Library/bin" >> $GITHUB_PATH
+        run: |
+          echo "/usr/share/miniconda/Library/bin" >> $GITHUB_PATH
+          echo "/usr/share/miniconda" >> $GITHUB_PATH
         
       - name: Installer dépendances système
         run: |
