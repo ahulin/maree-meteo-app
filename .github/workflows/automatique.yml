@@ -14,17 +14,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # --- R + cache CRAN ---
       - name: Installer R
         uses: r-lib/actions/setup-r@v2
-
-      - name: Cache bibliothèque R
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ hashFiles('script3.R') }}
-          restore-keys: |
-            ${{ runner.os }}-r-
 
       - name: Installer les packages R nécessaires
         run: |
@@ -33,19 +24,10 @@ jobs:
             repos='https://cloud.r-project.org'
           )"
 
-      # --- Python + cache pip ---
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
-      - name: Cache pip
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
 
       - name: Installer les packages Python nécessaires
         run: |
