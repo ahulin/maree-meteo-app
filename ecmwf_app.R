@@ -67,7 +67,8 @@ if (res != 0) stop("❌ Erreur dans grib_copy")
    commande <- sprintf("grib_to_netcdf -D NC_FLOAT -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
    res <- system(commande)
    if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
-
+    
+   message (paste0(list.files(destination_dir)))
   
 
     # on lit le ncdf
