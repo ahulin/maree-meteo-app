@@ -12,6 +12,18 @@ user <- Sys.getenv("CMEMS_USER")
 pwd  <- Sys.getenv("CMEMS_PWD")
 
 
+library(terra)
+library(raster)
+library(tidyr)
+library(ncdf4)
+library(dplyr)
+library(stringr)
+library(jsonlite)
+
+
+pause=TRUE
+if (pause)
+{
 # Se connecter à Copernicus Marine
 cmt$login(user, pwd)
 
@@ -39,13 +51,7 @@ d<-cmt$subset(
 cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 
-library(terra)
-library(raster)
-library(tidyr)
-library(ncdf4)
-library(dplyr)
-library(stringr)
-library(jsonlite)
+
 
 
 spots<-data.frame(
@@ -120,7 +126,7 @@ data_long$heure<-substr(data_long$date_paris,12,13)
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
 
 
-
+}
 ##################################### ECMWF ################################################################
 
 #' url_exists
