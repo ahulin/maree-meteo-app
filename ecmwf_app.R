@@ -39,7 +39,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
 
   # le nom et chemin du fichier téléchargé
   grib_file<-destination_path <-grib2_file
-
+destination_dir ="./data_meteo"
   # Forcer le chemin vers eccodes sous GitHub Actions
 
   
