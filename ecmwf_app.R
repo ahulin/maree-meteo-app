@@ -118,7 +118,7 @@ if (res != 0) stop("❌ Erreur dans grib_copy")
 
       # Extraction rapide des valeurs aux points
       data_points <- rbind(data_points,data.frame(id_station=points$id_station,
-                                                  val= terra::extract(rc2, points[, c("lon", "lat")]),
+                                                  val= raster::extract(rc2, points[, c("lon", "lat")]),
                                                   param=var,
                                                   level=niv,
                                                   sublevel=sub_level
