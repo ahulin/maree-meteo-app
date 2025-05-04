@@ -260,6 +260,9 @@ nheure<-200
 
        
        fichier_grib2<- download_meteo_ecmwf_forecast(date_run=date_run_,run_hour=heure_run,filiere="ecpds",type="oper",step=h,modele="ifs",destination_dir ="./data_meteo")
+
+      if (!file.exists(fichier_grib2[1])) {stop(paste0("Le fichier ",fichier_grib2[1]," n'a pas ete telecharge"))} else {message(paste0("Le fichier ",fichier_grib2[1]," a bien ete telecharge"))}
+       
        # on fait l'extraction au niveau des points des stations
        niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
        # Forcer le chemin vers eccodes sous GitHub Actions
