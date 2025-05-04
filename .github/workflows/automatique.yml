@@ -49,13 +49,23 @@ jobs:
             'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'
           ), repos='https://cloud.r-project.org')"
 
-      # 7) Exposer la bibliothèque R où les packages ont été installés
+      # 7) Vérifier l'installation des packages R
+      - name: Vérifier les packages R installés
+        run: |
+          Rscript -e "installed.packages()[,'Package']"
+
+      # 8) Exposer la bibliothèque R où les packages ont été installés
       - name: Exposer R_LIBS_USER
         run: |
           R_LIB=$(Rscript -e '.libPaths()[1]' --vanilla)
           echo "R_LIBS_USER=${R_LIB}" >> $GITHUB_ENV
 
-      # 8) Exécuter ton script R principal
+      # 9) Vérifier le chemin des bibliothèques R
+      - name: Vérifier R_LIBS_USER
+        run: |
+          echo "R_LIBS_USER is set to $R_LIBS_USER"
+
+      # 10) Exécuter ton script R principal
       - name: Exécuter script3.R
         env:
           CMEMS_USER:      ${{ secrets.CMEMS_USER }}
@@ -64,7 +74,7 @@ jobs:
         run: |
           Rscript script3.R
 
-      # 9) Commit + push vers le dépôt principal
+      # 11) Commit + push vers le dépôt principal
       - name: Commit des CSV générés
         run: |
           git config --global user.name "github-actions"
@@ -73,7 +83,7 @@ jobs:
           git commit -m "Mise à jour automatique des CSV" || echo "Rien à committer"
           git push
 
-      # 10) Push vers le dépôt privé de données
+      # 12) Push vers le dépôt privé de données
       - name: Push vers maree-donnees
         run: |
           git clone https://x-access-token:${{ secrets.DATA_PUSH_TOKEN }}@github.com/ahulin/maree-donnees.git data-push
