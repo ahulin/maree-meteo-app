@@ -65,7 +65,12 @@ jobs:
         run: |
           echo "R_LIBS_USER is set to $R_LIBS_USER"
 
-      # 10) Exécuter ton script R principal
+      # 10) Afficher le chemin des bibliothèques R avant d'exécuter le script
+      - name: Afficher le chemin des bibliothèques R
+        run: |
+          Rscript -e ".libPaths()"
+
+      # 11) Exécuter ton script R principal
       - name: Exécuter script3.R
         env:
           CMEMS_USER:      ${{ secrets.CMEMS_USER }}
@@ -74,7 +79,7 @@ jobs:
         run: |
           Rscript script3.R
 
-      # 11) Commit + push vers le dépôt principal
+      # 12) Commit + push vers le dépôt principal
       - name: Commit des CSV générés
         run: |
           git config --global user.name "github-actions"
@@ -83,7 +88,7 @@ jobs:
           git commit -m "Mise à jour automatique des CSV" || echo "Rien à committer"
           git push
 
-      # 12) Push vers le dépôt privé de données
+      # 13) Push vers le dépôt privé de données
       - name: Push vers maree-donnees
         run: |
           git clone https://x-access-token:${{ secrets.DATA_PUSH_TOKEN }}@github.com/ahulin/maree-donnees.git data-push
