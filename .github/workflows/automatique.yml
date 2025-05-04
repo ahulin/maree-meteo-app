@@ -51,7 +51,7 @@ jobs:
 
       - name: Vérifier l'installation d'ECCODES
         run: |
-          which grib_ls
+          which grib_copy
           grib_info -V
 
       - name: Installer les packages R nécessaires
