@@ -17,7 +17,7 @@ print(.libPaths())
 if (!requireNamespace("reticulate", quietly = TRUE)) {
   stop("Package 'reticulate' is not installed.")
 }
-library(reticulate)
+
 library(terra)
 library(tidyr)
 library(httr)
@@ -27,6 +27,7 @@ library(raster)
 library(dplyr)
 library(stringr)
 library(jsonlite)
+library(reticulate)
 
 
 ##################################### COPERNICUS MARINE ################################################################
