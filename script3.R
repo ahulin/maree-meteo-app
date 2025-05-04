@@ -13,7 +13,7 @@ pwd  <- Sys.getenv("CMEMS_PWD")
 
 
 library(terra)
-library(raster)
+
 library(tidyr)
 library(ncdf4)
 library(dplyr)
@@ -21,9 +21,7 @@ library(stringr)
 library(jsonlite)
 
 
-pause=TRUE
-if (pause)
-{
+
 # Se connecter à Copernicus Marine
 cmt$login(user, pwd)
 
@@ -100,7 +98,7 @@ datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
 
 
 # Extraire les valeurs de chaque couche (temps) pour chaque point
-valeurs <- extract(zos_stack, points_vect)
+valeurs <- terra::extract(zos_stack, points_vect)
 
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
 valeurs$spot <- points_vect$id[valeurs$ID]
@@ -126,7 +124,7 @@ data_long$heure<-substr(data_long$date_paris,12,13)
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
 
 
-}
+
 ##################################### ECMWF ################################################################
 
 #' url_exists
@@ -207,7 +205,7 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
 }
 
 
-
+library(raster)
 
 
 source("ecmwf_app.R")
