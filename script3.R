@@ -1,13 +1,22 @@
 # Afficher le chemin des bibliothèques utilisées
-cat("Library path:\n")
+cat("Initial library path:\n")
 print(.libPaths())
 
 # Forcer l'utilisation du chemin des bibliothèques défini dans R_LIBS_USER
 if (Sys.getenv("R_LIBS_USER") != "") {
+  cat("Setting library path to R_LIBS_USER:\n")
+  print(Sys.getenv("R_LIBS_USER"))
   .libPaths(Sys.getenv("R_LIBS_USER"))
 }
 
+# Afficher le chemin des bibliothèques après modification
+cat("Library path after setting R_LIBS_USER:\n")
+print(.libPaths())
+
 # Charger les packages nécessaires
+if (!requireNamespace("reticulate", quietly = TRUE)) {
+  stop("Package 'reticulate' is not installed.")
+}
 library(reticulate)
 library(terra)
 library(tidyr)
@@ -18,8 +27,6 @@ library(raster)
 library(dplyr)
 library(stringr)
 library(jsonlite)
-
-# Le reste de ton script...
 
 
 ##################################### COPERNICUS MARINE ################################################################
