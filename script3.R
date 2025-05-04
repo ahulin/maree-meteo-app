@@ -1,11 +1,30 @@
+# Afficher le chemin des bibliothèques utilisées
+cat("Library path:\n")
+print(.libPaths())
+
+# Forcer l'utilisation du chemin des bibliothèques défini dans R_LIBS_USER
+if (Sys.getenv("R_LIBS_USER") != "") {
+  .libPaths(Sys.getenv("R_LIBS_USER"))
+}
+
+# Charger les packages nécessaires
+library(reticulate)
+library(terra)
+library(tidyr)
+library(httr)
+library(rvest)
+library(ncdf4)
+library(raster)
+library(dplyr)
+library(stringr)
+library(jsonlite)
+
+# Le reste de ton script...
 
 
 ##################################### COPERNICUS MARINE ################################################################
 
 
-
-# Chargement de reticulate
-library(reticulate)
 
 pas_de_temps="heure" # ou quart_heure
 
@@ -51,7 +70,6 @@ cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 
 
-library(terra)
 
 spots<-data.frame(
   id=c("aytre","saint_trojan","hossegor"),
@@ -98,7 +116,7 @@ valeurs <- terra::extract(zos_stack, spots[, c("lon", "lat")])
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
 valeurs$spot <- spots$id[valeurs$ID]
 
-library(tidyr)
+
 #  pivot_longer(
 #    cols = -c(spot,ID), names_to = c("heure", "mesure"),
 #    names_sep = "[^[:alnum:]]+", values_to = "maree")
@@ -207,9 +225,6 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
 
 
 
-library(httr)
-library(rvest)
-library(jsonlite)
 
 source("ecmwf_app.R")
 
@@ -282,6 +297,5 @@ nheure<-200
      }
      
      write.csv(data,"data_meteo.csv",row.names=FALSE)
-
 
 
