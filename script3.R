@@ -1,32 +1,5 @@
-# Afficher le chemin des bibliothèques utilisées
-cat("Library path:\n")
-print(.libPaths())
-
-# Forcer l'utilisation du chemin des bibliothèques défini dans R_LIBS_USER
-if (Sys.getenv("R_LIBS_USER") != "") {
-  .libPaths(Sys.getenv("R_LIBS_USER"))
-}
-
-# Charger les packages nécessaires
+# Chargement de reticulate
 library(reticulate)
-library(terra)
-library(tidyr)
-library(httr)
-library(rvest)
-library(ncdf4)
-library(raster)
-library(dplyr)
-library(stringr)
-library(jsonlite)
-
-# Le reste de ton script...
-
-
-##################################### COPERNICUS MARINE ################################################################
-
-
-
-pas_de_temps="heure" # ou quart_heure
 
 # 👉 Chemin vers le Python configuré dans GitHub Actions
 use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
@@ -49,12 +22,9 @@ dir.create("data_maree", showWarnings = FALSE)
 date_min<-format(Sys.Date()-6,"%Y-%m-%dT00:00:00")
 date_max<-format(Sys.Date()+10,"%Y-%m-%dT23:00:00")
 
-if (pas_de_temps=='heure') {data_id<-"cmems_mod_ibi_phy_anfc_0.027deg-2D_PT1H-m" } else 
- {data_id<- "cmems_mod_ibi_phy_anfc_0.027deg-2D_PT15M-i" } 
-
 # 📥 Téléchargement des données
 d<-cmt$subset(
-  dataset_id = data_id,
+  dataset_id = "cmems_mod_ibi_phy_anfc_0.027deg-2D_PT1H-m",
   #variables = list("mlotst", "thetao", "ubar", "uo", "vbar", "vo", "zos"),
   variables = list("zos"),
   minimum_longitude=-5.6566816,
@@ -69,6 +39,13 @@ d<-cmt$subset(
 cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 
+library(terra)
+library(raster)
+library(tidyr)
+library(ncdf4)
+library(dplyr)
+library(stringr)
+library(jsonlite)
 
 
 spots<-data.frame(
@@ -78,6 +55,7 @@ spots<-data.frame(
 )
 # on s'assure qu'on est sur mer et pas sur terre
 spots$lon<-spots$lon-0.05
+points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
 
 
 # on cherche le fichier le plus récent
@@ -102,21 +80,27 @@ max_lat <- d$coordinates_extent[[2]]$maximum
 crs(zos_stack) <- "EPSG:4326"
 
 # Forcer l'extent
-terra::ext(zos_stack) <- c(min_lon, max_lon, min_lat, max_lat)
+ext(zos_stack) <- c(min_lon, max_lon, min_lat, max_lat)
 
 
 #construire la date
 datemin <- as.POSIXct(d$coordinates_extent[[3]]$minimum, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
 datemax <-  as.POSIXct(d$coordinates_extent[[3]]$maximum, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
 
+# puis conversion vers Europe/Paris
+datemin_paris <- format(datemin, tz = "Europe/Paris", usetz = TRUE)
+datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
+
+
 
 # Extraire les valeurs de chaque couche (temps) pour chaque point
-valeurs <- terra::extract(zos_stack, spots[, c("lon", "lat")])
+valeurs <- extract(zos_stack, points_vect)
 
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
-valeurs$spot <- spots$id[valeurs$ID]
+valeurs$spot <- points_vect$id[valeurs$ID]
 
-
+library(tidyr)
+#data_long <- valeurs %>%
 #  pivot_longer(
 #    cols = -c(spot,ID), names_to = c("heure", "mesure"),
 #    names_sep = "[^[:alnum:]]+", values_to = "maree")
@@ -126,20 +110,14 @@ data_long <- valeurs %>%
   pivot_longer(
     cols = -c(spot,ID), names_to = c("date_UTC"),
     values_to = "maree")
-if (pas_de_temps=="heure") {
-  data_long$date_UTC<-rep(seq(datemin,datemax,by=60*60),3)} else {
- data_long$date_UTC<-rep(seq(datemin,datemax,by=60*15),3)
- }
+data_long$date_UTC<-rep(seq(datemin,datemax,by=60*60),3)
 data_long$date_paris<- format(data_long$date_UTC, tz = "Europe/Paris", usetz = TRUE)
 
 data_long$jour<-substr(data_long$date_paris,1,10)
 data_long$heure<-substr(data_long$date_paris,12,13)
-data_long$minute<-substr(data_long$date_paris,15,16)
 
 #exporte le csv
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
-
-
 
 
 
@@ -229,10 +207,6 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
 source("ecmwf_app.R")
 
 cat("✅ Le fichier ecmwf_app.R a été chargé directement depuis le dépôt cloné\n")
-
-
-
-
 
 
 
