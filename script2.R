@@ -88,7 +88,7 @@ datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
 
 
 # Extraire les valeurs de chaque couche (temps) pour chaque point
-valeurs <- extract(zos_stack, points_vect)
+valeurs <- terra::extract(zos_stack, points_vect)
 
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
 valeurs$spot <- points_vect$id[valeurs$ID]
