@@ -56,8 +56,9 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   ##### à partir de là, on traite les fichiers niveaux par niveau ##########################
 
   #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere")
-  niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","surface","heightAboveGround","lowCloudLayer")
+  #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","surface","heightAboveGround","lowCloudLayer")
   #niveaux<-c("surface","entireAtmosphere","heightAboveGround","isobaricInhPa","meanSea","mostUnstableParcel","nominalTop","soilLayer")
+  niveaux=c("heightAboveGround","meansea","surface")
 
 
   data_points<-NULL
