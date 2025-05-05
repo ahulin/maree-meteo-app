@@ -56,8 +56,8 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   ##### à partir de là, on traite les fichiers niveaux par niveau ##########################
 
   #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere")
-  #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
-  niveaux<-c("surface","entireAtmosphere","heightAboveGround","isobaricInhPa","meanSea","mostUnstableParcel","nominalTop","soilLayer")
+  niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","surface","heightAboveGround","lowCloudLayer")
+  #niveaux<-c("surface","entireAtmosphere","heightAboveGround","isobaricInhPa","meanSea","mostUnstableParcel","nominalTop","soilLayer")
 
 
   data_points<-NULL
@@ -195,7 +195,11 @@ library(tidyr)
 if (is.null(date_run)) { # si la date n'est pas précisée, on prend l'echeance la plus récente dispo
     dispo<-NULL
     dispo<-get_echeances_dispo(filiere,modele)
-    if (!is.null(run_hour)) {dispo<-subset(dispo,heure_run ==run_hour)}
+    if (!is.null(run_hour)) {
+      dispo<-subset(dispo,heure_run ==run_hour)
+    } else {
+      dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
+      }
     dispo<-dispo[dispo$url==max(dispo$url),]
     date_run <- as.Date(dispo$date)
     run_hour<-dispo$heure_run
