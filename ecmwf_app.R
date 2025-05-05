@@ -83,29 +83,30 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
                        destination_dir,niv)
   
       nc<-nc_open(fich_nc)
-      tt<-strptime("1900-01-01 00:00:00","%Y-%m-%d %H:%M:%S")+ ncvar_get(nc, "time")*60*60
-      #attributes(nc)$names
-      print(paste("The file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"NetCDF attributes"))
-      #names(nc$dim)
-  
-      ################################################################
-      # Extraire les valeurs aux points des stations
-      ###################################################################
-  
-      # récupère les données au stations
-      # en faire un raster
-  
-      rj <-rast(fich_nc)
-      tmp_raster <- rj
-  
-      # on gère le cas où il y a deux heure dans le fichier : on ne prend que la première. Vu pour le niveau "heightAboveGround"
-      if (length(tt)>1) {
+
+    tt<-strptime("1900-01-01 00:00:00","%Y-%m-%d %H:%M:%S")+ ncvar_get(nc, "time")*60*60
+    #attributes(nc)$names
+    print(paste("The nc file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"NetCDF attributes"))
+    #names(nc$dim)
+    
+    ################################################################
+    # Extraire les valeurs aux points des stations
+    ###################################################################
+    
+    # récupère les données au stations
+    # en faire un raster
+    
+    rj <-terra::rast(fich_nc)
+    tmp_raster <- raster::stack(rj)
+    
+    # on gère le cas où il y a deux heure dans le fichier : on ne prend que la première. Vu pour le niveau "heightAboveGround"
+    if (length(tt)>1) {
       indice<-seq(1,length(names(rj)),length(tt))
       tmp_raster<-tmp_raster[[indice]]
       names(tmp_raster)<-gsub("_1","",names(tmp_raster))
-
-      }
-
+      
+    }
+    
     for (var2 in names(tmp_raster)) # pour une variable donnéees (ex vsw) il peut y avoir plusieures levels, traités ici
     {
       print(var2)
@@ -113,19 +114,23 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
       # on traite le cas sot et vsw (ne perturbe pas les autres variables)
       sub_level<-strsplit(var2,"_")[[1]][2]
       var<-strsplit(var2,"_")[[1]][1]
-
+      
       #  limiter le raster au domaine national
-      e <- ext(domaine)
-      rc <- crop(tmp_raster[var2], e)
-      rc2<-disaggregate(raster(rc),4,method='bilinear')
-
+    
+  
+      e <- extent(domaine)
+     
+      
+      rc <- crop(tmp_raster[[var2]], e)
+      rc2<-disaggregate(rc,4,method='bilinear',na.rm=TRUE)
+      
       #library(Ani.sSatellite)
       #raster2map(raster(rc))
       #raster2map(rc2)
-
-
+      
+      
       # Extraction rapide des valeurs aux points
-      data_points <- rbind(data_points,data.frame(id_station=points$id_station,
+      data_points <- rbind(data_points,data.frame(id_station=points$id,
                                                   val= raster::extract(rc2, points[, c("lon", "lat")]),
                                                   param=var,
                                                   level=niv,
