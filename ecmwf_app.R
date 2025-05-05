@@ -326,7 +326,7 @@ get_echeances_dispo<-function(filiere="ecpds",modele="ifs",type="oper")
       if (type=="oper") { type<-c("oper","scda")}
     }
 
-   liste_heure_run<-c("00" ,"06","12" ,"18" )
+   liste_heure_run<-c("00" ,"12"  )
 
     # Lire la page HTML
     page <- read_html(url)
