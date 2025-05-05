@@ -221,34 +221,34 @@ jour_ech<-format(Sys.Date(),"%Y-%m-%d")
 premiere_heure<-0
 nheure<-200 
      
-     # on regarde quelles sont les run disponibles sur le serveur
-     ech_IFS<-NULL
-     ech_IFS<-get_echeances_dispo(filiere="ecpds",modele="ifs",type="oper")
-     
-     # on regarde ce qu'il existe (ou pas) pour la journée d'aujourd'hui comme run
-     echtoday<-subset(ech_IFS,date==Sys.Date())
-     
-     # si la donnée du jour est dispo on prend la plus recente, sinon on prend la plus récente la veille
-     
-     if (nrow(echtoday)==1) {
-       date_run_<-format(Sys.Date(),"%Y-%m-%d")
-       heure_run<-max(echtoday$heure_run)
-     } else
-     {
-       date_run_<-format(Sys.Date()-1,"%Y-%m-%d")
-       heure_run<-"18"
-       premiere_heure<-premiere_heure+6
-       nheure<-nheure+6
-     }
-     
-     data<-NULL
-     #1 - traitement par echéance
-     
-     message(" ################ TRAITEMENT DE l'echeance  #################### ")
+ # on regarde quelles sont les run disponibles sur le serveur
+ ech_IFS<-NULL
+ ech_IFS<-get_echeances_dispo(filiere="ecpds",modele="ifs",type="oper")
+ 
+ # on regarde ce qu'il existe (ou pas) pour la journée d'aujourd'hui comme run
+ echtoday<-subset(ech_IFS,date==Sys.Date())
+ 
+ # si la donnée du jour est dispo on prend la plus recente, sinon on prend la plus récente la veille
+ 
+ if (nrow(echtoday)==1) {
+   date_run_<-format(Sys.Date(),"%Y-%m-%d")
+   heure_run<-max(echtoday$heure_run)
+ } else
+ {
+   date_run_<-format(Sys.Date()-1,"%Y-%m-%d")
+   heure_run<-"18"
+   premiere_heure<-premiere_heure+6
+   nheure<-nheure+6
+ }
+ 
+ data<-NULL
+ #1 - traitement par echéance
+ 
+ message(" ################ TRAITEMENT DE l'echeance  #################### ")
 
 
-       #  Créer un dossier pour recevoir les fichiers
-       dir.create("data_meteo", showWarnings = FALSE)
+   #  Créer un dossier pour recevoir les fichiers
+   dir.create("data_meteo", showWarnings = FALSE)
 
      for (h in seq(premiere_heure,nheure,3))
      {
@@ -268,7 +268,7 @@ nheure<-200
        # Forcer le chemin vers eccodes sous GitHub Actions
 
 
-       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_,destination_dir ="./data_meteo")
+       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_)
        # calcul de l'heure et de la date du run
        dateheure_run<-paste0(fichier_grib2[3]," ",fichier_grib2[2],":00")
        data_h$date_run<-as.POSIXct( strptime(dateheure_run,"%Y-%m-%d %H:%M"))
