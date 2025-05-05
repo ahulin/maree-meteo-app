@@ -175,6 +175,7 @@ if (res != 0) stop("❌ Erreur dans grib_copy")
 download_meteo_ecmwf_forecast<-function(date_run=NULL,run_hour=NULL,step,modele,filiere="ecpds",type="oper",destination_dir = "N:/4_developpements/COPERNICUS/ECMWF")
 {
 
+
 # Verifier le dossier de destination
 if (!dir.exists(destination_dir)) {stop(paste0("Le dossier ",destination_dir," n'existe pas"))}
 
@@ -188,7 +189,11 @@ library(tidyr)
 if (is.null(date_run)) { # si la date n'est pas précisée, on prend l'echeance la plus récente dispo
     dispo<-NULL
     dispo<-get_echeances_dispo(filiere,modele)
-    if (!is.null(run_hour)) {dispo<-subset(dispo,heure_run ==run_hour)}
+    if (!is.null(run_hour)) {
+      dispo<-subset(dispo,heure_run ==run_hour)
+    } else {
+      dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
+    }
     dispo<-dispo[dispo$url==max(dispo$url),]
     date_run <- as.Date(dispo$date)
     run_hour<-dispo$heure_run
