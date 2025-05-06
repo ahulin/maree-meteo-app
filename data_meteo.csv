@@ -1,0 +1,1231 @@
+"id_station","val","param","level","sublevel","date_run","date_ech"
+"aytre",0,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",0,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",0,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",0,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",0,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",0,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",NA,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",NA,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",NA,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",NA,"u100","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",NA,"u100","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",NA,"u100","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",NA,"v100","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",NA,"v100","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",NA,"v100","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",NA,"u10","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",NA,"u10","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",NA,"u10","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",-3.79977416992188,"v10","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",-4.42166137695312,"v10","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",2.5618896484375,"v10","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",-3.79977416992188,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",-4.42166137695312,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",2.5618896484375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",-6.55255126953125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06
+"saint_trojan",-6.21975708007812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06
+"hossegor",-4.12454223632812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06
+"aytre",101713.5,"msl","meanSea",NA,2025-05-06,2025-05-06
+"saint_trojan",101692.5,"msl","meanSea",NA,2025-05-06,2025-05-06
+"hossegor",101609.1875,"msl","meanSea",NA,2025-05-06,2025-05-06
+"aytre",8.2292947769165,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",9.43638706207275,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",5.37683200836182,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",283.764007568359,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",285.035491943359,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",285.209808349609,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",282.341735839844,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",284.015563964844,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",283.854431152344,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",-2.90878295898438,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",-3.94686889648438,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",0.931488037109375,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",-7.24661254882812,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",-7.15451049804688,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",-2.82687377929688,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",-1.75883483886719,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",-3.05790710449219,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",0.415481567382812,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",-4.94807434082031,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",-5.66316223144531,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",-1.96296691894531,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",282.313171386719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",283.993835449219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",283.966979980469,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",277.772155761719,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",279.011901855469,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",280.820495605469,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",101721.5625,"msl","meanSea",NA,2025-05-06,2025-05-06 03:00:00
+"saint_trojan",101695.8125,"msl","meanSea",NA,2025-05-06,2025-05-06 03:00:00
+"hossegor",101582.0625,"msl","meanSea",NA,2025-05-06,2025-05-06 03:00:00
+"aytre",8.4656417965889,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",10.0787401199341,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",5.06941661983728,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",282.481628417969,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",283.993835449219,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",284.228698730469,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",281.607666015625,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",283.259033203125,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",283.074951171875,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",-2.52757263183594,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",-3.22120666503906,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",0.471817016601562,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",-7.17697143554688,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",-7.38427734375,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",-2.14352416992188,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",-1.54698181152344,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",-2.61021423339844,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",0.0255279541015625,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",-5.14973449707031,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",-6.08039855957031,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",-1.62580871582031,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",282.166137695312,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",283.378540039062,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",283.820434570312,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",278.501586914062,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",279.306762695312,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",281.098754882812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",101809.875,"msl","meanSea",NA,2025-05-06,2025-05-06 06:00:00
+"saint_trojan",101784.3125,"msl","meanSea",NA,2025-05-06,2025-05-06 06:00:00
+"hossegor",101686.9375,"msl","meanSea",NA,2025-05-06,2025-05-06 06:00:00
+"aytre",8.66655522584915,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",9.96117210388184,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",6.20740270614624,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",283.6328125,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",283.80126953125,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",285.77197265625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",282.165863037109,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",283.349945068359,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",283.810394287109,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",-2.64546203613281,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",-4.00071716308594,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",1.61671447753906,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",-5.35165405273438,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",-6.05917358398438,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",-1.9090576171875,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",-1.99617004394531,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",-3.27864074707031,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",1.30851745605469,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",-4.26614379882812,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",-5.03469848632812,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",-1.68875122070312,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",283.764343261719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",283.826354980469,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",285.838562011719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",279.654479980469,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",279.670593261719,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",280.663269042969,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",101843.125,"msl","meanSea",NA,2025-05-06,2025-05-06 09:00:00
+"saint_trojan",101833.3125,"msl","meanSea",NA,2025-05-06,2025-05-06 09:00:00
+"hossegor",101734.1875,"msl","meanSea",NA,2025-05-06,2025-05-06 09:00:00
+"aytre",8.0406329035759,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",7.98623546212912,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",9.13049221038818,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",288.052368164062,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",287.248657226562,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",286.960571289062,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",283.768432617188,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",283.830444335938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",285.761596679688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",-2.28181457519531,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",-1.40478515625,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",3.31236267089844,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",-5.2777099609375,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",-6.1412353515625,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",-4.980224609375,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",-1.68083190917969,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",-0.950851440429688,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",2.79988098144531,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",-4.35215759277344,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",-5.29722595214844,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",-4.20469665527344,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",288.130828857422,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",287.377899169922,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",286.811981201172,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",279.046356201172,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",279.579071044922,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",280.422821044922,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",101776.6875,"msl","meanSea",NA,2025-05-06,2025-05-06 12:00:00
+"saint_trojan",101778.8125,"msl","meanSea",NA,2025-05-06,2025-05-06 12:00:00
+"hossegor",101734.625,"msl","meanSea",NA,2025-05-06,2025-05-06 12:00:00
+"aytre",8.29311180114746,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",8.44606590270996,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",9.35021018981934,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",288.841278076172,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",288.391571044922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",287.281707763672,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",288.130554199219,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",287.386413574219,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",286.632507324219,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",-2.12899780273438,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",-1.71806335449219,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",3.568603515625,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",-5.50743103027344,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",-6.52784729003906,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",-4.95802307128906,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",-1.53813171386719,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",-1.28446960449219,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",2.93843078613281,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",-4.44708251953125,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",-5.52911376953125,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",-4.08941650390625,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",288.893493652344,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",288.392028808594,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",286.989685058594,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",277.949645996094,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",278.315856933594,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",280.406188964844,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",101741.0625,"msl","meanSea",NA,2025-05-06,2025-05-06 15:00:00
+"saint_trojan",101745.4375,"msl","meanSea",NA,2025-05-06,2025-05-06 15:00:00
+"hossegor",101703.5,"msl","meanSea",NA,2025-05-06,2025-05-06 15:00:00
+"aytre",8.57776641845703,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",9.69329071044922,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",7.66086578369141,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",289.42822265625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",289.310546875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",287.21826171875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",288.04345703125,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",288.2421875,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",286.484375,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",-5.08958435058594,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",-5.53240966796875,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",1.63998413085938,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",-5.36199951171875,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",-6.22232055664062,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",-4.96609497070312,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",-3.60211181640625,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",-4.54254150390625,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",1.16741943359375,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",-3.9482421875,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",-5.02880859375,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",-4.028076171875,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",288.037841796875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",288.493896484375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",286.505126953125,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",279.234130859375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",278.692138671875,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",281.097900390625,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",101769.875,"msl","meanSea",NA,2025-05-06,2025-05-06 18:00:00
+"saint_trojan",101750.25,"msl","meanSea",NA,2025-05-06,2025-05-06 18:00:00
+"hossegor",101759.625,"msl","meanSea",NA,2025-05-06,2025-05-06 18:00:00
+"aytre",5.14943408966064,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",7.03168201446533,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",5.61801624298096,"fg10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",288.029083251953,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",288.495391845703,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",287.470489501953,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",285.492248535156,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",287.061096191406,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",285.022521972656,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",-3.59590148925781,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",-4.05172729492188,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",0.759963989257812,"u100","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",-3.85798645019531,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",-3.73210144042969,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",-2.89674377441406,"v100","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",-1.76420593261719,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",-2.75761413574219,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",0.317825317382812,"u10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",-2.24740600585938,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",-2.63241577148438,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",-2.01181030273438,"v10","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",285.422912597656,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",287.031799316406,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",285.703186035156,"t2m","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",280.247131347656,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",280.538146972656,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",281.775451660156,"d2m","heightAboveGround",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",101901.25,"msl","meanSea",NA,2025-05-06,2025-05-06 21:00:00
+"saint_trojan",101891.8125,"msl","meanSea",NA,2025-05-06,2025-05-06 21:00:00
+"hossegor",101852.5625,"msl","meanSea",NA,2025-05-06,2025-05-06 21:00:00
+"aytre",6.10481977462769,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",6.94141346216202,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",5.35114243626595,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",285.439910888672,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",287.033172607422,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",286.030242919922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",284.395721435547,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",286.210174560547,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",284.615936279297,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",-2.64523315429688,"u100","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",-3.03590393066406,"u100","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",3.94174194335938,"u100","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",-6.23388671875,"v100","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",-5.98835754394531,"v100","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",1.82647705078125,"v100","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",-1.22908020019531,"u10","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",-2.18782043457031,"u10","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",2.74186706542969,"u10","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",-3.81915283203125,"v10","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",-4.43878173828125,"v10","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",1.63006591796875,"v10","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",284.335510253906,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",286.171936035156,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",285.031311035156,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",279.693420410156,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07
+"saint_trojan",281.027404785156,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07
+"hossegor",282.872619628906,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07
+"aytre",101933.4375,"msl","meanSea",NA,2025-05-06,2025-05-07
+"saint_trojan",101914.125,"msl","meanSea",NA,2025-05-06,2025-05-07
+"hossegor",101835.1875,"msl","meanSea",NA,2025-05-06,2025-05-07
+"aytre",7.65686769038439,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",8.88710784912109,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",3.52326170727611,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",284.360412597656,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",286.171936035156,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",285.290100097656,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",283.050720214844,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",284.879333496094,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",284.366638183594,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",-4.05316162109375,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",-4.52253723144531,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",1.3758544921875,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",-6.39131164550781,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",-6.55430603027344,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",0.0062103271484375,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",-2.24070739746094,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",-3.33787536621094,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",0.165054321289062,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",-4.08399963378906,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",-5.01417541503906,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",0.296371459960938,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",282.989685058594,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",284.816833496094,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",284.308044433594,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",279.178161621094,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",280.478942871094,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",282.720642089844,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",101848.125,"msl","meanSea",NA,2025-05-06,2025-05-07 03:00:00
+"saint_trojan",101823.0625,"msl","meanSea",NA,2025-05-06,2025-05-07 03:00:00
+"hossegor",101716.25,"msl","meanSea",NA,2025-05-06,2025-05-07 03:00:00
+"aytre",7.37132167816162,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",8.33647060394287,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",4.85813808441162,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",283.329284667969,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",284.830261230469,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",284.564636230469,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",282.365051269531,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",284.023254394531,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",282.831359863281,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",-4.46080017089844,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",-4.92660522460938,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",-0.52740478515625,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",-5.28370666503906,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",-5.39599609375,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",0.642059326171875,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",-2.72817993164062,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",-3.63027954101562,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",-0.979400634765625,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",-3.70075988769531,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",-4.14973449707031,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",0.876388549804688,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",283.087036132812,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",284.121704101562,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",283.285766601562,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",279.288696289062,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",280.034301757812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",282.635375976562,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",101884.0625,"msl","meanSea",NA,2025-05-06,2025-05-07 06:00:00
+"saint_trojan",101858.9375,"msl","meanSea",NA,2025-05-06,2025-05-07 06:00:00
+"hossegor",101748.375,"msl","meanSea",NA,2025-05-06,2025-05-07 06:00:00
+"aytre",6.88487577438354,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",7.77310520410538,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",4.24940824508667,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",286.206176757812,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",285.789184570312,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",286.964477539062,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",283.089721679688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",284.112182617188,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",283.271362304688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",-2.86885070800781,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",-3.81611633300781,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",0.344512939453125,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",-2.92755126953125,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",-3.18370056152344,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",0.439483642578125,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",-2.23579406738281,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",-3.11787414550781,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",0.385299682617188,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",-2.41433715820312,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",-2.75588989257812,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",0.390350341796875,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",286.382019042969,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",285.880065917969,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",287.091491699219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",281.153991699219,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",280.171569824219,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",282.728698730469,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",101904.375,"msl","meanSea",NA,2025-05-06,2025-05-07 09:00:00
+"saint_trojan",101897.6875,"msl","meanSea",NA,2025-05-06,2025-05-07 09:00:00
+"hossegor",101789.1875,"msl","meanSea",NA,2025-05-06,2025-05-07 09:00:00
+"aytre",7.18491744995117,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",6.35433578491211,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",5.79272079467773,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",288.847778320312,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",288.462036132812,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",288.343872070312,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",286.383911132812,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",285.899536132812,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",287.102172851562,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",-4.15580749511719,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",-3.07356262207031,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",1.45367431640625,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",-3.25070190429688,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",-3.95863342285156,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",-2.71871948242188,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",-3.33050537109375,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",-2.35150146484375,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",1.56451416015625,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",-2.6964111328125,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",-3.4630126953125,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",-2.4327392578125,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",288.892578125,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",288.51025390625,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",288.3515625,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",279.02001953125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",278.611328125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",282.60986328125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",101840.25,"msl","meanSea",NA,2025-05-06,2025-05-07 12:00:00
+"saint_trojan",101832.25,"msl","meanSea",NA,2025-05-06,2025-05-07 12:00:00
+"hossegor",101724,"msl","meanSea",NA,2025-05-06,2025-05-07 12:00:00
+"aytre",6.62587881088257,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",6.05405569076538,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",7.42073949426413,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",289.360412597656,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",289.246154785156,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",289.063049316406,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",288.772399902344,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",288.508728027344,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",288.206481933594,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",-3.52957153320312,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",-3.21551513671875,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",0.587265014648438,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",-3.53817749023438,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",-3.36727905273438,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",-4.63172912597656,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",-2.76095581054688,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",-2.61666870117188,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",0.577911376953125,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",-2.87039184570312,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",-2.86477661132812,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",-3.91824340820312,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",289.271850585938,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",289.239135742188,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",289.017456054688,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",279.283569335938,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",278.562377929688,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",281.374389648438,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",101719.75,"msl","meanSea",NA,2025-05-06,2025-05-07 15:00:00
+"saint_trojan",101712.0625,"msl","meanSea",NA,2025-05-06,2025-05-07 15:00:00
+"hossegor",101580.5,"msl","meanSea",NA,2025-05-06,2025-05-07 15:00:00
+"aytre",6.84058856964111,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",6.57969379425049,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",7.51803302764893,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",289.365966796875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",289.414306640625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",289.210693359375,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",288.382690429688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",289.006225585938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",288.264526367188,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",-3.77210998535156,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",-4.06492614746094,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",-0.181121826171875,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",-4.15830993652344,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",-4.11473083496094,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",-5.59921264648438,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",-2.75196838378906,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",-3.34254455566406,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",-0.0883941650390625,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",-3.13980102539062,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",-3.46328735351562,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",-4.35684204101562,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",288.302429199219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",289.034851074219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",288.460632324219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",281.356628417969,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",280.170593261719,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",281.921081542969,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",101643.5,"msl","meanSea",NA,2025-05-06,2025-05-07 18:00:00
+"saint_trojan",101621,"msl","meanSea",NA,2025-05-06,2025-05-07 18:00:00
+"hossegor",101498.5,"msl","meanSea",NA,2025-05-06,2025-05-07 18:00:00
+"aytre",6.05457878112793,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",7.10293388366699,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",5.11237907409668,"fg10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",288.306884765625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",289.046630859375,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",288.522216796875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",286.345397949219,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",287.406433105469,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",287.315612792969,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",-5.29595947265625,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",-4.99873352050781,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",-1.19227600097656,"u100","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",-3.69136047363281,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",-4.56944274902344,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",-4.25178527832031,"v100","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",-3.08926391601562,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",-3.58633422851562,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",-0.743560791015625,"u10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",-2.49168395996094,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",-3.38279724121094,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",-2.38768005371094,"v10","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",286.270935058594,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",287.332946777344,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",287.316833496094,"t2m","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",281.951110839844,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",282.276306152344,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",282.496520996094,"d2m","heightAboveGround",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",101686.8125,"msl","meanSea",NA,2025-05-06,2025-05-07 21:00:00
+"saint_trojan",101664.5,"msl","meanSea",NA,2025-05-06,2025-05-07 21:00:00
+"hossegor",101515.4375,"msl","meanSea",NA,2025-05-06,2025-05-07 21:00:00
+"aytre",5.28677177429199,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",6.58251762390137,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",4.34123039804399,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",286.268005371094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",287.314880371094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",287.355895996094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",284.443298339844,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",285.804626464844,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",285.542419433594,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",-4.38314819335938,"u100","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",-5.02163696289062,"u100","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",-3.98826599121094,"u100","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",-3.58848571777344,"v100","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",-3.13690185546875,"v100","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",-0.404861450195312,"v100","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",-2.38352966308594,"u10","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",-3.60643005371094,"u10","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",-2.29612731933594,"u10","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",-2.28480529785156,"v10","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",-2.31459045410156,"v10","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",-0.0975494384765625,"v10","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",284.393493652344,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",285.762145996094,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",285.436462402344,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",282.069763183594,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08
+"saint_trojan",282.657165527344,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08
+"hossegor",281.499450683594,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08
+"aytre",101614.875,"msl","meanSea",NA,2025-05-06,2025-05-08
+"saint_trojan",101590.875,"msl","meanSea",NA,2025-05-06,2025-05-08
+"hossegor",101423,"msl","meanSea",NA,2025-05-06,2025-05-08
+"aytre",5.59707549586892,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",6.39170742034912,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",3.6109610684216,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",284.393127441406,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",285.761779785156,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",285.438537597656,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",283.280853271484,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",284.784271240234,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",283.594818115234,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",-4.14657592773438,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",-4.43621826171875,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",-1.39588928222656,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",-4.29853820800781,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",-3.81648254394531,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",1.20713806152344,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",-2.2774658203125,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",-3.2344970703125,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",-1.5599365234375,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",-2.82682800292969,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",-2.87663269042969,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",0.814529418945312,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",283.236206054688,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",284.749389648438,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",283.562866210938,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",281.230346679688,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",282.499877929688,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",281.237670898438,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",101482.6875,"msl","meanSea",NA,2025-05-06,2025-05-08 03:00:00
+"saint_trojan",101454.75,"msl","meanSea",NA,2025-05-06,2025-05-08 03:00:00
+"hossegor",101290.375,"msl","meanSea",NA,2025-05-06,2025-05-08 03:00:00
+"aytre",6.45701313018799,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",7.4177827835083,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",4.5712251663208,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",283.506805419922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",284.756317138672,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",283.684539794922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",282.726928710938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",284.168334960938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",282.737182617188,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",-4.91949462890625,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",-5.20693969726562,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",-3.36575317382812,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",-3.85301208496094,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",-4.13575744628906,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",0.6787109375,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",-3.06552124023438,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",-3.86654663085938,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",-2.39926147460938,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",-2.74130249023438,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",-3.15902709960938,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",0.506988525390625,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",283.243957519531,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",284.297668457031,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",283.321594238281,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",281.181457519531,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",281.865539550781,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",281.680969238281,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",101465.5,"msl","meanSea",NA,2025-05-06,2025-05-08 06:00:00
+"saint_trojan",101437.25,"msl","meanSea",NA,2025-05-06,2025-05-08 06:00:00
+"hossegor",101277,"msl","meanSea",NA,2025-05-06,2025-05-08 06:00:00
+"aytre",6.99762201309204,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",7.19232422113419,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",3.48164628073573,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",286.447570800781,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",286.492492675781,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",287.950012207031,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",283.228759765625,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",284.282470703125,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",283.317626953125,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",-4.12739562988281,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",-4.55149841308594,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",-0.857711791992188,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",-2.72993469238281,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",-3.05607604980469,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",0.236129760742188,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",-3.226318359375,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",-3.7109375,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",-0.4609375,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",-2.31402587890625,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",-2.69561767578125,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",0.21282958984375,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",286.604461669922,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",286.623504638672,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",288.103485107422,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",281.564910888672,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",281.457489013672,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",282.186004638672,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",101465,"msl","meanSea",NA,2025-05-06,2025-05-08 09:00:00
+"saint_trojan",101441.75,"msl","meanSea",NA,2025-05-06,2025-05-08 09:00:00
+"hossegor",101302,"msl","meanSea",NA,2025-05-06,2025-05-08 09:00:00
+"aytre",6.62329196929932,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",5.96972751617432,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",6.39004611968994,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",288.871520996094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",288.446716308594,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",289.674255371094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",286.612579345703,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",286.629669189453,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",288.100860595703,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",-3.16241455078125,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",-3.14346313476562,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",2.22589111328125,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",-2.5277099609375,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",-3.09921264648438,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",-3.075439453125,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",-2.55300903320312,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",-2.55447387695312,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",2.26290893554688,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",-2.10734558105469,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",-2.72502136230469,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",-2.66667175292969,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",288.951812744141,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",288.513336181641,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",289.436676025391,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",280.490875244141,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",280.507965087891,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",282.701324462891,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",101397.75,"msl","meanSea",NA,2025-05-06,2025-05-08 12:00:00
+"saint_trojan",101386.125,"msl","meanSea",NA,2025-05-06,2025-05-08 12:00:00
+"hossegor",101208.75,"msl","meanSea",NA,2025-05-06,2025-05-08 12:00:00
+"aytre",5.44977474212646,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",5.34984493255615,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",9.15769100189209,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",290.034698486328,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",289.548370361328,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",290.047393798828,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",288.937652587891,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",288.510894775391,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",289.053863525391,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",-2.40263366699219,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",-1.92008972167969,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",1.15995788574219,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",-3.31272888183594,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",-3.96284484863281,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",-6.86329650878906,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",-1.74453735351562,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",-1.40151977539062,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",1.04257202148438,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",-2.67779541015625,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",-3.32305908203125,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",-5.56329345703125,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",289.882446289062,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",289.568969726562,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",289.657348632812,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",280.495239257812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",280.463989257812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",282.817504882812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",101292.9375,"msl","meanSea",NA,2025-05-06,2025-05-08 15:00:00
+"saint_trojan",101285.5,"msl","meanSea",NA,2025-05-06,2025-05-08 15:00:00
+"hossegor",101112.375,"msl","meanSea",NA,2025-05-06,2025-05-08 15:00:00
+"aytre",7.12133455276489,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",7.8052027001977,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",8.57975393533707,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",289.984802246094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",289.871520996094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",289.767517089844,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",289.080444335938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",289.226440429688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",289.012084960938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",-3.912109375,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",-4.64047241210938,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",0.83355712890625,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",-4.47334289550781,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",-4.97050476074219,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",-6.47779846191406,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",-2.76713562011719,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",-3.78422546386719,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",0.636428833007812,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",-3.22262573242188,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",-3.99948120117188,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",-4.86154174804688,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",289.0380859375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",289.27197265625,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",288.95947265625,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",281.68115234375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",281.33349609375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",283.27783203125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",101264.125,"msl","meanSea",NA,2025-05-06,2025-05-08 18:00:00
+"saint_trojan",101244.375,"msl","meanSea",NA,2025-05-06,2025-05-08 18:00:00
+"hossegor",101105.375,"msl","meanSea",NA,2025-05-06,2025-05-08 18:00:00
+"aytre",6.07078075408936,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",6.67698192596436,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",4.6391097009182,"fg10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",289.034240722656,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",289.269592285156,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",289.023986816406,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",287.0966796875,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",288.24853515625,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",287.513671875,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",-5.32463073730469,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",-5.00904846191406,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",1.09672546386719,"u100","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",-4.92752075195312,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",-5.02833557128906,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",-3.62083435058594,"v100","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",-2.72708129882812,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",-3.20413208007812,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",0.701629638671875,"u10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",-3.02568054199219,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",-3.46879577636719,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",-2.15214538574219,"v10","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",287.0205078125,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",288.201171875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",287.64404296875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",281.921875,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",282.77587890625,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",284.6962890625,"d2m","heightAboveGround",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",101373.25,"msl","meanSea",NA,2025-05-06,2025-05-08 21:00:00
+"saint_trojan",101347,"msl","meanSea",NA,2025-05-06,2025-05-08 21:00:00
+"hossegor",101222,"msl","meanSea",NA,2025-05-06,2025-05-08 21:00:00
+"aytre",6.02649593353271,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",7.01332759857178,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",4.48798274993896,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",287.0205078125,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",288.201171875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",287.84765625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",285.288146972656,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",286.608459472656,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",287.036193847656,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",-5.10179138183594,"u100","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",-5.16398620605469,"u100","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",0.177108764648438,"u100","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",-4.51029968261719,"v100","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",-4.56343078613281,"v100","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",-0.0922393798828125,"v100","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",-2.62266540527344,"u10","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",-3.39488220214844,"u10","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",-0.113388061523438,"u10","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",-2.91978454589844,"v10","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",-3.34580993652344,"v10","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",0.169326782226562,"v10","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",285.241882324219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",286.555358886719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",287.084655761719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",281.950866699219,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09
+"saint_trojan",282.853698730469,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09
+"hossegor",283.185241699219,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09
+"aytre",101319.0625,"msl","meanSea",NA,2025-05-06,2025-05-09
+"saint_trojan",101294.5625,"msl","meanSea",NA,2025-05-06,2025-05-09
+"hossegor",101168.9375,"msl","meanSea",NA,2025-05-06,2025-05-09
+"aytre",6.31606674194336,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",6.99459457397461,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",4.86938109993935,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",285.241882324219,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",286.555358886719,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",287.084655761719,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",283.988830566406,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",285.310607910156,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",285.980041503906,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",-4.61610412597656,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",-4.62678527832031,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",1.61882019042969,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",-4.87803649902344,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",-4.66667175292969,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",0.552963256835938,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",-2.53327941894531,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",-3.23469543457031,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",0.348800659179688,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",-3.25617980957031,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",-3.52668762207031,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",0.0543670654296875,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",283.950286865234,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",285.267669677734,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",285.952239990234,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",281.917572021484,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",282.879974365234,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",282.883880615234,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",101267.75,"msl","meanSea",NA,2025-05-06,2025-05-09 03:00:00
+"saint_trojan",101240.875,"msl","meanSea",NA,2025-05-06,2025-05-09 03:00:00
+"hossegor",101130.9375,"msl","meanSea",NA,2025-05-06,2025-05-09 03:00:00
+"aytre",6.50787925720215,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",7.42206382751465,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",4.46150794625282,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",284.112548828125,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",285.278076171875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",286.074951171875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",283.285583496094,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",284.627380371094,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",285.439880371094,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",-4.642822265625,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",-4.7034912109375,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",2.268798828125,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",-4.36370849609375,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",-4.54098510742188,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",0.750335693359375,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",-2.76167297363281,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",-3.53974914550781,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",0.707809448242188,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",-3.12261962890625,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",-3.53717041015625,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",0.46746826171875,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",283.833770751953,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",284.732696533203,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",285.915802001953,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",282.050079345703,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",282.750274658203,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",283.524688720703,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",101341.1875,"msl","meanSea",NA,2025-05-06,2025-05-09 06:00:00
+"saint_trojan",101315.3125,"msl","meanSea",NA,2025-05-06,2025-05-09 06:00:00
+"hossegor",101219.375,"msl","meanSea",NA,2025-05-06,2025-05-09 06:00:00
+"aytre",6.95185470581055,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",6.77302169799805,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",4.91601194068789,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",287.366180419922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",286.962371826172,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",288.473602294922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",283.831787109375,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",284.733642578125,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",285.902587890625,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",-3.6436767578125,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",-3.57540893554688,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",2.81753540039062,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",-3.00163269042969,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",-3.29957580566406,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",-0.0539703369140625,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",-2.86161804199219,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",-2.88725280761719,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",2.37031555175781,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",-2.50814819335938,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",-2.91879272460938,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",-0.079681396484375,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",287.537841796875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",287.114013671875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",288.518798828125,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",283.596923828125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",283.248779296875,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",283.788818359375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",101379.25,"msl","meanSea",NA,2025-05-06,2025-05-09 09:00:00
+"saint_trojan",101361.9375,"msl","meanSea",NA,2025-05-06,2025-05-09 09:00:00
+"hossegor",101294.0625,"msl","meanSea",NA,2025-05-06,2025-05-09 09:00:00
+"aytre",6.69388514757156,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",5.743323802948,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",5.70720624923706,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",290.698913574219,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",290.046569824219,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",289.313659667969,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",287.549194335938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",287.108276367188,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",288.528686523438,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",-4.1248779296875,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",-3.19247436523438,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",2.84823608398438,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",-1.90994262695312,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",-3.07203674316406,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",-1.24070739746094,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",-3.2882080078125,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",-2.4539794921875,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",2.5435791015625,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",-1.64886474609375,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",-2.81243896484375,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",-1.07733154296875,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",290.777893066406,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",290.136291503906,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",289.308654785156,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",283.999084472656,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",283.829162597656,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",284.389709472656,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",101337,"msl","meanSea",NA,2025-05-06,2025-05-09 12:00:00
+"saint_trojan",101323.3125,"msl","meanSea",NA,2025-05-06,2025-05-09 12:00:00
+"hossegor",101280.1875,"msl","meanSea",NA,2025-05-06,2025-05-09 12:00:00
+"aytre",5.29953289031982,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",5.04916669800878,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",6.00255107879639,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",291.624938964844,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",290.900817871094,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",289.946716308594,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",290.777313232422,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",289.179168701172,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",289.278778076172,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",-2.68521118164062,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",0.520721435546875,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",1.4283447265625,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",-1.62034606933594,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",-0.679855346679688,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",-3.63427734375,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",-2.01737976074219,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",1.03291320800781,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",1.37788391113281,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",-1.4862060546875,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",-0.1490478515625,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",-3.0892333984375,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",291.491271972656,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",289.452209472656,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",289.919494628906,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",284.039611816406,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",284.077697753906,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",284.968322753906,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",101255,"msl","meanSea",NA,2025-05-06,2025-05-09 15:00:00
+"saint_trojan",101278.6875,"msl","meanSea",NA,2025-05-06,2025-05-09 15:00:00
+"hossegor",101182.5625,"msl","meanSea",NA,2025-05-06,2025-05-09 15:00:00
+"aytre",7.48840999603271,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",5.81081295013428,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",5.01070308685303,"fg10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",291.515991210938,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",290.528198242188,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",290.163940429688,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",289.171447753906,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",288.690979003906,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",289.380432128906,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",-4.88484191894531,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",-4.73252868652344,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",-0.0378265380859375,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",-1.44465637207031,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",-2.94319152832031,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",-3.37507629394531,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",-3.52830505371094,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",-3.39085388183594,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",0.113784790039062,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",-1.37808227539062,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",-2.59951782226562,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",-2.67495727539062,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",289.068176269531,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",289.777648925781,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",289.527160644531,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",284.902648925781,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",285.074523925781,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",284.788879394531,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",101322.5,"msl","meanSea",NA,2025-05-06,2025-05-09 18:00:00
+"saint_trojan",101290.25,"msl","meanSea",NA,2025-05-06,2025-05-09 18:00:00
+"hossegor",101175.625,"msl","meanSea",NA,2025-05-06,2025-05-09 18:00:00
+"aytre",5.93425273895264,"fg310","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",6.64815044403076,"fg310","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",4.42172527313232,"fg310","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",289.061401367188,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",289.778686523438,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",289.537475585938,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",287.257629394531,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",288.072082519531,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",288.060852050781,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",-5.80499267578125,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",-6.224609375,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",-2.11099243164062,"u100","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",-1.80209350585938,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",-1.99069213867188,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",-2.9852294921875,"v100","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",-2.90118408203125,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",-3.80889892578125,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",-1.00079345703125,"u10","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",-1.264404296875,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",-1.4228515625,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",-1.499755859375,"v10","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",287.203063964844,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",288.018493652344,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",288.067810058594,"t2m","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",285.181091308594,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",285.713317871094,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",285.235778808594,"d2m","heightAboveGround",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",101436.3125,"msl","meanSea",NA,2025-05-06,2025-05-09 21:00:00
+"saint_trojan",101416.5,"msl","meanSea",NA,2025-05-06,2025-05-09 21:00:00
+"hossegor",101298.3125,"msl","meanSea",NA,2025-05-06,2025-05-09 21:00:00
+"aytre",5.14312076568604,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",5.93674564361572,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",3.58226871490479,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",287.197509765625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",288.008056640625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",288.086669921875,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",285.739685058594,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",286.804626464844,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",286.787536621094,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",-5.68794250488281,"u100","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",-5.97206115722656,"u100","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",-3.54222106933594,"u100","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",-0.200241088867188,"v100","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",0.694778442382812,"v100","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",2.57398986816406,"v100","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",-3.13284301757812,"u10","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",-3.81106567382812,"u10","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",-2.03152465820312,"u10","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",-0.714920043945312,"v10","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",-0.375320434570312,"v10","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",1.12077331542969,"v10","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",285.682739257812,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",286.747680664062,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",286.760375976562,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",284.448852539062,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10
+"saint_trojan",285.276000976562,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10
+"hossegor",284.776977539062,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10
+"aytre",101438.78125,"msl","meanSea",NA,2025-05-06,2025-05-10
+"saint_trojan",101413.71875,"msl","meanSea",NA,2025-05-06,2025-05-10
+"hossegor",101295.15625,"msl","meanSea",NA,2025-05-06,2025-05-10
+"aytre",5.10820814594626,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",5.66713762283325,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",4.6486591398716,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",285.681610107422,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",286.753875732422,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",286.769989013672,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",284.780883789062,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",286.135864257812,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",286.136840820312,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",-5.40298461914062,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",-5.60713195800781,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",-4.81900024414062,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",1.4088134765625,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",2.34906005859375,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",2.80026245117188,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",-3.21533203125,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",-3.870849609375,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",-2.82421875,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",-0.191650390625,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",-0.042236328125,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",1.030029296875,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",284.767822265625,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",286.129638671875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",286.127685546875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",283.875732421875,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",284.843505859375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",284.721435546875,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",101425.875,"msl","meanSea",NA,2025-05-06,2025-05-10 03:00:00
+"saint_trojan",101394.6875,"msl","meanSea",NA,2025-05-06,2025-05-10 03:00:00
+"hossegor",101264.34375,"msl","meanSea",NA,2025-05-06,2025-05-10 03:00:00
+"aytre",6.24196624755859,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",6.95278167724609,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",5.12895965576172,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",285.379516601562,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",286.569458007812,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",286.415649414062,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",284.679382324219,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",286.094909667969,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",285.623718261719,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",-5.77561950683594,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",-6.38844299316406,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",-4.64888000488281,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",3.74430847167969,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",5.05364990234375,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",1.95181274414062,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",-3.85836791992188,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",-4.43429565429688,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",-3.09982299804688,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",1.13421630859375,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",2.05291748046875,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",0.74969482421875,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",285.504730224609,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",286.631195068359,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",286.185394287109,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",283.773773193359,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",284.441253662109,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",284.737640380859,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",101485.0625,"msl","meanSea",NA,2025-05-06,2025-05-10 06:00:00
+"saint_trojan",101450.5625,"msl","meanSea",NA,2025-05-06,2025-05-10 06:00:00
+"hossegor",101341.3125,"msl","meanSea",NA,2025-05-06,2025-05-10 06:00:00
+"aytre",7.21554660797119,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",7.519211769104,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",5.57849216461182,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",289.795867919922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",289.740692138672,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",291.407196044922,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",285.509460449219,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",286.626159667969,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",286.168151855469,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",-4.99591064453125,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",-5.72328186035156,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",-3.37104797363281,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",2.26551818847656,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",3.255615234375,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",0.939987182617188,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",-3.96795654296875,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",-4.61761474609375,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",-2.39300537109375,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",1.49896240234375,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",2.38275146484375,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",0.28509521484375,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",289.998779296875,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",289.911865234375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",291.622802734375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",286.788818359375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",286.064208984375,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",286.795654296875,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",101508.75,"msl","meanSea",NA,2025-05-06,2025-05-10 09:00:00
+"saint_trojan",101474,"msl","meanSea",NA,2025-05-06,2025-05-10 09:00:00
+"hossegor",101363.9375,"msl","meanSea",NA,2025-05-06,2025-05-10 09:00:00
+"aytre",7.92600697278976,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",7.58492708206177,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",5.10557239130139,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",293.244262695312,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",292.626586914062,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",294.782836914062,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",290.005920410156,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",289.919006347656,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",291.627502441406,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",-4.88729858398438,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",-4.68569946289062,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",-1.624267578125,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",3.44631958007812,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",3.6527099609375,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",2.73365783691406,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",-3.94424438476562,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",-3.65982055664062,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",-0.568267822265625,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",2.63839721679688,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",2.70065307617188,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",1.62155151367188,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",293.318725585938,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",292.693237304688,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",294.849487304688,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",286.490600585938,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",286.145385742188,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",285.777221679688,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",101448.9375,"msl","meanSea",NA,2025-05-06,2025-05-10 12:00:00
+"saint_trojan",101418.375,"msl","meanSea",NA,2025-05-06,2025-05-10 12:00:00
+"hossegor",101258.75,"msl","meanSea",NA,2025-05-06,2025-05-10 12:00:00
+"aytre",7.56158447265625,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",6.14991760253906,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",5.32810961082578,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",294.212127685547,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",293.634979248047,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",296.073944091797,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",293.318725585938,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",292.693237304688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",294.849487304688,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",-4.0054931640625,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",-3.9864501953125,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",-3.87677001953125,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",1.81782531738281,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",1.64305114746094,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",2.53739929199219,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",-3.18417358398438,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",-3.13632202148438,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",-2.73495483398438,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",1.24424743652344,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",0.984481811523438,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",1.48765563964844,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",294.221374511719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",293.650085449219,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",295.994812011719,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",286.627624511719,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",286.118835449219,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",284.989440917969,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",101326.8125,"msl","meanSea",NA,2025-05-06,2025-05-10 15:00:00
+"saint_trojan",101291.625,"msl","meanSea",NA,2025-05-06,2025-05-10 15:00:00
+"hossegor",101095.125,"msl","meanSea",NA,2025-05-06,2025-05-10 15:00:00
+"aytre",6.06242847442627,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",5.81325244903564,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",6.57114124298096,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",294.381164550781,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",293.838195800781,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",296.030578613281,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",293.656036376953,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",293.358184814453,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",294.391876220703,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",-5.33889770507812,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",-6.06233215332031,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",-6.36027526855469,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",0.957199096679688,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",1.56968688964844,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",1.41685485839844,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",-3.54144287109375,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",-4.43817138671875,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",-3.88226318359375,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",0.251617431640625,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",0.631988525390625,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",0.870758056640625,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",293.681640625,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",293.443359375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",294.27734375,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",287.4765625,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",286.6220703125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",286.9658203125,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",101281.125,"msl","meanSea",NA,2025-05-06,2025-05-10 18:00:00
+"saint_trojan",101249.5,"msl","meanSea",NA,2025-05-06,2025-05-10 18:00:00
+"hossegor",101076.75,"msl","meanSea",NA,2025-05-06,2025-05-10 18:00:00
+"aytre",5.92003870010376,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",6.05413293838501,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",6.22765588760376,"fg310","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",293.681640625,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",293.443359375,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",294.27734375,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",290.992736816406,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",291.527404785156,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",291.481994628906,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",-7.72799682617188,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",-7.00152587890625,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",-7.51301574707031,"u100","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",0.32525634765625,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",1.65412902832031,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",2.48220825195312,"v100","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",-4.24836730957031,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",-4.49201965332031,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",-4.24177551269531,"u10","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",-0.3260498046875,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",0.1727294921875,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",1.1251220703125,"v10","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",290.926086425781,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",291.459777832031,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",291.413391113281,"t2m","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",286.727355957031,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",287.036437988281,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",287.021301269531,"d2m","heightAboveGround",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",101372.5,"msl","meanSea",NA,2025-05-06,2025-05-10 21:00:00
+"saint_trojan",101343.6875,"msl","meanSea",NA,2025-05-06,2025-05-10 21:00:00
+"hossegor",101188.4375,"msl","meanSea",NA,2025-05-06,2025-05-10 21:00:00
+"aytre",6.409827709198,"fg310","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",6.69606737047434,"fg310","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",6.93369245529175,"fg310","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",290.916168212891,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",291.459625244141,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",291.400054931641,"mx2t3","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",289.547943115234,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",290.276947021484,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",289.643646240234,"mn2t3","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",-7.64901733398438,"u100","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",-7.80555725097656,"u100","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",-5.7330322265625,"u100","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",1.92623901367188,"v100","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",3.51678466796875,"v100","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",3.48905944824219,"v100","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",-4.39862060546875,"u10","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",-5.02386474609375,"u10","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",-3.67620849609375,"u10","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",0.452560424804688,"v10","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",1.33268737792969,"v10","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",1.51823425292969,"v10","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",289.498657226562,"t2m","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",290.251586914062,"t2m","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",289.560668945312,"t2m","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",286.288208007812,"d2m","heightAboveGround",NA,2025-05-06,2025-05-11
+"saint_trojan",286.673461914062,"d2m","heightAboveGround",NA,2025-05-06,2025-05-11
+"hossegor",286.732055664062,"d2m","heightAboveGround",NA,2025-05-06,2025-05-11
+"aytre",101288.5,"msl","meanSea",NA,2025-05-06,2025-05-11
+"saint_trojan",101258.9375,"msl","meanSea",NA,2025-05-06,2025-05-11
+"hossegor",101161.625,"msl","meanSea",NA,2025-05-06,2025-05-11
