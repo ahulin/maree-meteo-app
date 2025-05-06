@@ -24,7 +24,7 @@
 #' fichier_grib2<- download_meteo_ecmwf_forecast(date_run=NULL,run_hour=NULL,filiere="forecast",step=0,modele="ifs",type="oper")
 #' d<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=villes,niveaux="soilLayer")
 #' }
-traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),destination_dir = NULL,
+traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.5),
                                niveaux=c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere"))
 {
  message(grib2_file)
@@ -39,7 +39,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
 
   # le nom et chemin du fichier téléchargé
   grib_file<-destination_path <-grib2_file
-
+  destination_dir ="./data_meteo"
   # Forcer le chemin vers eccodes sous GitHub Actions
 
   
@@ -48,15 +48,19 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   #les infos ont été prises ici pour la suite : https://confluence.ecmwf.int/display/OIFS/How+to+convert+GRIB+to+netCDF
 
   # on sépare les niveaux, un fichier grb par niveau
-res <- system(paste0("grib_copy ",destination_path," ",destination_dir,"/ICMGG_[typeOfLevel].grb"))
-if (res != 0) stop("❌ Erreur dans grib_copy")
+  res <- system(paste0("grib_copy ",destination_path," ",destination_dir,"/ICMGG_[typeOfLevel].grb"))
+  if (res != 0) stop("❌ Erreur dans grib_copy")
 
-
+  message (paste0(list.files(destination_dir)))
 
   ##### à partir de là, on traite les fichiers niveaux par niveau ##########################
 
   #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere")
-  #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
+  #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","surface","heightAboveGround","lowCloudLayer")
+  #niveaux<-c("surface","entireAtmosphere","heightAboveGround","isobaricInhPa","meanSea","mostUnstableParcel","nominalTop","soilLayer")
+  niveaux=c("heightAboveGround","meanSea")
+
+
   data_points<-NULL
   for (niv in niveaux)
   {
@@ -64,40 +68,45 @@ if (res != 0) stop("❌ Erreur dans grib_copy")
     # on converti les fichiers par niveau en ncdf (l'étape précédente est nécessaire pour le faire)
     #system("grib_to_netcdf -D NC_FLOAT -o C:/TEMP/ICMGG_surface.nc C:/TEMP/ICMGG_surface.grb")
     commande<-NULL
-   commande <- sprintf("grib_to_netcdf -D NC_FLOAT -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
-   res <- system(commande)
-   if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
+    commande <- sprintf("grib_to_netcdf -D NC_FLOAT -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
 
+    message(commande)
+    
+     res <- system(commande)
+     if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
+      
+
+    
   
+      # on lit le ncdf
+      fich_nc<-sprintf("%s/ICMGG_%s.nc",
+                       destination_dir,niv)
+  
+      nc<-nc_open(fich_nc)
 
-    # on lit le ncdf
-    fich_nc<-sprintf("%s/ICMGG_%s.nc",
-                     destination_dir,niv)
-
-    nc<-nc_open(fich_nc)
     tt<-strptime("1900-01-01 00:00:00","%Y-%m-%d %H:%M:%S")+ ncvar_get(nc, "time")*60*60
     #attributes(nc)$names
-    print(paste("The file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"NetCDF attributes"))
+    print(paste("The nc file has",nc$nvars,"variables,",nc$ndims,"dimensions and",nc$natts,"NetCDF attributes"))
     #names(nc$dim)
-
+    
     ################################################################
     # Extraire les valeurs aux points des stations
     ###################################################################
-
+    
     # récupère les données au stations
     # en faire un raster
-
-    rj <-rast(fich_nc)
-    tmp_raster <- rj
-
+    
+    rj <-terra::rast(fich_nc)
+    tmp_raster <- raster::stack(rj)
+    
     # on gère le cas où il y a deux heure dans le fichier : on ne prend que la première. Vu pour le niveau "heightAboveGround"
     if (length(tt)>1) {
       indice<-seq(1,length(names(rj)),length(tt))
       tmp_raster<-tmp_raster[[indice]]
       names(tmp_raster)<-gsub("_1","",names(tmp_raster))
-
-      }
-
+      
+    }
+    
     for (var2 in names(tmp_raster)) # pour une variable donnéees (ex vsw) il peut y avoir plusieures levels, traités ici
     {
       print(var2)
@@ -105,20 +114,24 @@ if (res != 0) stop("❌ Erreur dans grib_copy")
       # on traite le cas sot et vsw (ne perturbe pas les autres variables)
       sub_level<-strsplit(var2,"_")[[1]][2]
       var<-strsplit(var2,"_")[[1]][1]
-
+      
       #  limiter le raster au domaine national
-      e <- ext(domaine)
-      rc <- crop(tmp_raster[var2], e)
-      rc2<-disaggregate(raster(rc),4,method='bilinear')
-
+    
+  
+      e <- extent(domaine)
+     
+      
+      rc <- crop(tmp_raster[[var2]], e)
+      rc2<-disaggregate(rc,4,method='bilinear',na.rm=TRUE)
+      
       #library(Ani.sSatellite)
       #raster2map(raster(rc))
       #raster2map(rc2)
-
-
+      
+      
       # Extraction rapide des valeurs aux points
-      data_points <- rbind(data_points,data.frame(id_station=points$id_station,
-                                                  val= terra::extract(rc2, points[, c("lon", "lat")]),
+      data_points <- rbind(data_points,data.frame(id_station=points$id,
+                                                  val= raster::extract(rc2, points[, c("lon", "lat")]),
                                                   param=var,
                                                   level=niv,
                                                   sublevel=sub_level
@@ -175,7 +188,6 @@ if (res != 0) stop("❌ Erreur dans grib_copy")
 download_meteo_ecmwf_forecast<-function(date_run=NULL,run_hour=NULL,step,modele,filiere="ecpds",type="oper",destination_dir = "N:/4_developpements/COPERNICUS/ECMWF")
 {
 
-
 # Verifier le dossier de destination
 if (!dir.exists(destination_dir)) {stop(paste0("Le dossier ",destination_dir," n'existe pas"))}
 
@@ -193,7 +205,7 @@ if (is.null(date_run)) { # si la date n'est pas précisée, on prend l'echeance 
       dispo<-subset(dispo,heure_run ==run_hour)
     } else {
       dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
-    }
+      }
     dispo<-dispo[dispo$url==max(dispo$url),]
     date_run <- as.Date(dispo$date)
     run_hour<-dispo$heure_run
