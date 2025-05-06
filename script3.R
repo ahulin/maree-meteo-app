@@ -12,6 +12,16 @@ user <- Sys.getenv("CMEMS_USER")
 pwd  <- Sys.getenv("CMEMS_PWD")
 
 
+library(terra)
+
+library(tidyr)
+library(ncdf4)
+library(dplyr)
+library(stringr)
+library(jsonlite)
+
+
+
 # Se connecter à Copernicus Marine
 cmt$login(user, pwd)
 
@@ -39,13 +49,7 @@ d<-cmt$subset(
 cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 
-library(terra)
-library(raster)
-library(tidyr)
-library(ncdf4)
-library(dplyr)
-library(stringr)
-library(jsonlite)
+
 
 
 spots<-data.frame(
@@ -94,7 +98,7 @@ datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
 
 
 # Extraire les valeurs de chaque couche (temps) pour chaque point
-valeurs <- extract(zos_stack, points_vect)
+valeurs <- terra::extract(zos_stack, points_vect)
 
 # Ajouter l'identifiant pour retrouver à qui appartiennent les données
 valeurs$spot <- points_vect$id[valeurs$ID]
@@ -201,7 +205,7 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...)
 }
 
 
-
+library(raster)
 
 
 source("ecmwf_app.R")
@@ -215,37 +219,37 @@ cat("✅ Le fichier ecmwf_app.R a été chargé directement depuis le dépôt cl
 
 jour_ech<-format(Sys.Date(),"%Y-%m-%d")
 premiere_heure<-0
-nheure<-200 
+nheure<-5
      
-     # on regarde quelles sont les run disponibles sur le serveur
-     ech_IFS<-NULL
-     ech_IFS<-get_echeances_dispo(filiere="ecpds",modele="ifs",type="oper")
-     
-     # on regarde ce qu'il existe (ou pas) pour la journée d'aujourd'hui comme run
-     echtoday<-subset(ech_IFS,date==Sys.Date())
-     
-     # si la donnée du jour est dispo on prend la plus recente, sinon on prend la plus récente la veille
-     
-     if (nrow(echtoday)==1) {
-       date_run_<-format(Sys.Date(),"%Y-%m-%d")
-       heure_run<-max(echtoday$heure_run)
-     } else
-     {
-       date_run_<-format(Sys.Date()-1,"%Y-%m-%d")
-       heure_run<-"18"
-       premiere_heure<-premiere_heure+6
-       nheure<-nheure+6
-     }
-     
-     data<-NULL
-     #1 - traitement par echéance
-     
-     message(" ################ TRAITEMENT DE l'echeance  #################### ")
+ # on regarde quelles sont les run disponibles sur le serveur
+ ech_IFS<-NULL
+ ech_IFS<-get_echeances_dispo(filiere="ecpds",modele="ifs",type="oper")
+ 
+ # on regarde ce qu'il existe (ou pas) pour la journée d'aujourd'hui comme run
+ echtoday<-subset(ech_IFS,date==Sys.Date())
+ 
+ # si la donnée du jour est dispo on prend la plus recente, sinon on prend la plus récente la veille
+ 
+ if (nrow(echtoday)==1) {
+   date_run_<-format(Sys.Date(),"%Y-%m-%d")
+   heure_run<-max(echtoday$heure_run)
+ } else
+ {
+   date_run_<-format(Sys.Date()-1,"%Y-%m-%d")
+   heure_run<-"18"
+   premiere_heure<-premiere_heure+6
+   nheure<-nheure+6
+ }
+ 
+ data<-NULL
+ #1 - traitement par echéance
+ 
+ message(" ################ TRAITEMENT DE l'echeance  #################### ")
 
 
-       #  Créer un dossier pour recevoir les fichiers
-       dir.create("data_meteo", showWarnings = FALSE)
-
+   #  Créer un dossier pour recevoir les fichiers
+   dir.create("data_meteo", showWarnings = FALSE)
+  print(paste0("Nombre d'heure à traiter : ",nheure))
      for (h in seq(premiere_heure,nheure,3))
      {
        print(paste0("Heure :",h))
@@ -256,12 +260,15 @@ nheure<-200
 
        
        fichier_grib2<- download_meteo_ecmwf_forecast(date_run=date_run_,run_hour=heure_run,filiere="ecpds",type="oper",step=h,modele="ifs",destination_dir ="./data_meteo")
+
+      if (!file.exists(fichier_grib2[1])) {stop(paste0("Le fichier ",fichier_grib2[1]," n'a pas ete telecharge"))} else {message(paste0("Le fichier ",fichier_grib2[1]," a bien ete telecharge"))}
+       
        # on fait l'extraction au niveau des points des stations
        niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
        # Forcer le chemin vers eccodes sous GitHub Actions
 
 
-       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_,destination_dir ="./data_meteo")
+       data_h<-traitement_grb2ecmwf(grib2_file=fichier_grib2[1],points=spots,niveaux=niveaux_)
        # calcul de l'heure et de la date du run
        dateheure_run<-paste0(fichier_grib2[3]," ",fichier_grib2[2],":00")
        data_h$date_run<-as.POSIXct( strptime(dateheure_run,"%Y-%m-%d %H:%M"))
@@ -271,4 +278,6 @@ nheure<-200
      }
      
      write.csv(data,"data_meteo.csv",row.names=FALSE)
+     if(file.exists("data_meteo.csv")) { print("Le fichier data_meteo.csv a ete correctement cree") }
+
 
