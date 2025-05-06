@@ -219,7 +219,7 @@ cat("✅ Le fichier ecmwf_app.R a été chargé directement depuis le dépôt cl
 
 jour_ech<-format(Sys.Date(),"%Y-%m-%d")
 premiere_heure<-0
-nheure<-5
+nheure<-120
      
  # on regarde quelles sont les run disponibles sur le serveur
  ech_IFS<-NULL
