@@ -67,21 +67,29 @@ jobs:
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
         run: Rscript script3.R
 
-      - name: Commit du fichier CSV généré
+      # …vos étapes précédentes (checkout, génération des CSV, etc.)…
+
+      - name: Commit des fichiers CSV générés
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add zos_points.csv
-          git commit -m "Ajout automatique du CSV avec les hauteurs de mer" || echo "Aucun changement à committer"
+          git add zos_points.csv data_meteo.csv
+          git commit -m "Ajout automatique des CSV : hauteurs de mer et données météo" \
+            || echo "Aucun changement à committer"
           git push
-
+      
       - name: Push vers dépôt privé maree-donnees
+        env:
+          DATA_PUSH_TOKEN: ${{ secrets.DATA_PUSH_TOKEN }}
         run: |
-          git clone https://x-access-token:${{ secrets.DATA_PUSH_TOKEN }}@github.com/ahulin/maree-donnees.git data-push
+          git clone https://x-access-token:${DATA_PUSH_TOKEN}@github.com/ahulin/maree-donnees.git data-push
           cp zos_points.csv data-push/
+          cp data_meteo.csv data-push/
           cd data-push
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add zos_points.csv
-          git commit -m "Mise à jour du fichier CSV quotidienne" || echo "Pas de changement"
+          git add zos_points.csv data_meteo.csv
+          git commit -m "Mise à jour quotidienne des CSV : hauteurs de mer et données météo" \
+            || echo "Pas de changement"
           git push
+
