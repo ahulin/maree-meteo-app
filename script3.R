@@ -219,7 +219,7 @@ cat("✅ Le fichier ecmwf_app.R a été chargé directement depuis le dépôt cl
 
 jour_ech<-format(Sys.Date(),"%Y-%m-%d")
 premiere_heure<-0
-nheure<-48
+nheure<-5
      
  # on regarde quelles sont les run disponibles sur le serveur
  ech_IFS<-NULL
@@ -278,5 +278,6 @@ nheure<-48
      }
      
      write.csv(data,"data_meteo.csv",row.names=FALSE)
+     if(file.exists("data_meteo.csv")) { print("Le fichier data_meteo.csv a ete correctement cree") }
 
 
