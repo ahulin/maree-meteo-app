@@ -249,7 +249,7 @@ nheure<-100
 
    #  Créer un dossier pour recevoir les fichiers
    dir.create("data_meteo", showWarnings = FALSE)
-
+  print(paste0("Nombre d'heure à traiter : ",nheure))
      for (h in seq(premiere_heure,nheure,3))
      {
        print(paste0("Heure :",h))
