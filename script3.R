@@ -264,7 +264,9 @@ nheure<-120
       if (!file.exists(fichier_grib2[1])) {stop(paste0("Le fichier ",fichier_grib2[1]," n'a pas ete telecharge"))} else {message(paste0("Le fichier ",fichier_grib2[1]," a bien ete telecharge"))}
        
        # on fait l'extraction au niveau des points des stations
-       niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
+       #niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
+       niveaux_<-c("meanSea","surface","heightAboveGround")
+       
        # Forcer le chemin vers eccodes sous GitHub Actions
 
 
