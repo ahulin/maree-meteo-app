@@ -17,6 +17,7 @@ geocode_place <- function(place_name) {
     return(coords)
   }
 
+
 #' get_maree_from_open_meteo
 #'
 #' @param place 
@@ -37,9 +38,6 @@ library(httr)
 library(jsonlite)
 library(dplyr)
 
-
-
-
 if (is.null(date_deb))
 {
   date_deb=format(Sys.Date()-5,"%Y-%m-%d")
@@ -50,9 +48,8 @@ if (is.null(njour))
 {
   njour=15
 }
-# Fonction : récupérer les données de marée
-get_tide_data <- function(lat, lon) {
-  url <- paste0("https://marine-api.open-meteo.com/v1/marine?",
+
+ url <- paste0("https://marine-api.open-meteo.com/v1/marine?",
                 "latitude=", lat,
                 "&longitude=", lon,
                 "&hourly=sea_level_height_msl,sea_surface_temperature,wave_height",
@@ -65,16 +62,12 @@ get_tide_data <- function(lat, lon) {
   
   if (is.null(res$hourly$sea_level_height_msl)) stop("Pas de données de marée retournées.")
   
-  data.frame(
+  tide_df <- data.frame(
     datetime = res$hourly$time,
     tide_height = res$hourly$sea_level_height_msl,
     sea_temp=res$hourly$sea_surface_temperature,
     wave_height=res$hourly$wave_height
   )
-}
-
-
-tide_df <- get_tide_data(lat=coords$latitude, lon=coords$longitude)
 
 # Affichage et sauvegarde
 
