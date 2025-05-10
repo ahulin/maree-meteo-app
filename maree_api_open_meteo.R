@@ -3,7 +3,7 @@
 #'
 #' @param place_name 
 #'
-#' @returns
+#' @return
 #' @export
 #'
 #' @examples
@@ -23,7 +23,7 @@ geocode_place <- function(place_name) {
 #' @param date_deb 
 #' @param njour 
 #'
-#' @returns
+#' @return
 #' @export
 #'
 #' @examples
@@ -73,14 +73,11 @@ get_tide_data <- function(lat, lon) {
   )
 }
 
-# Exemple d'utilisation :
-# Soit par nom de ville :
 
-coords <- geocode_place(place)
 tide_df <- get_tide_data(lat=coords$latitude, lon=coords$longitude)
 
 # Affichage et sauvegarde
-write.csv(tide_df, paste0("tides_", gsub(" ", "_", tolower(place)), ".csv"), row.names = FALSE)
+
 return(tide_df)
 }
 
@@ -91,7 +88,7 @@ return(tide_df)
 #' @param place ; as text
 #' @description fonction à lancer manuellement. Permet le calcul de la médiane sur un an des amplitudes de marées pour un site, 
 #' qui va correspondre à un coefficient de 70. Les résultats par site sont intégrés dans le fichier Spots.csv à a racine des scripts.
-#' @returns
+#' @return
 #' @export
 #'
 #'
@@ -101,13 +98,10 @@ calcul_base_70<-function(place)
 {
   
  
-  
+coords<-  geocode_place(place)
 r<-get_maree_from_open_meteo(lon=coords$longitude, lat=coords$latitude,format(Sys.Date()-365),365)
 
 
-#Et si tu connais l’amplitude typique d’un coefficient 70 pour ce lieu (A70), tu peux estimer :
-  
-#  coefficient_approximatif <- (amplitude / median(r$tide_height,na.rm=TRUE)  * 70
 
 r$jour<-substr(r$datetime,1,10)                          
 mini<-aggregate(tide_height ~jour,r,min,na.rm=TRUE)
