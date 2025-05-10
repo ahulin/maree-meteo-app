@@ -58,7 +58,7 @@ jobs:
         run: |
           Rscript -e "install.packages(c(
             'reticulate','terra','tidyr',
-            'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite'
+            'httr','rvest','ncdf4','raster','dplyr','stringr','jsonlite','lubridate'
           ), repos='https://cloud.r-project.org')"
 
       - name: Exécuter le script R
