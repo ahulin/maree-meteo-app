@@ -52,11 +52,12 @@ cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 
 
-spots<-data.frame(
-  id=c("aytre","saint_trojan","hossegor"),
-  lat=c(46.1188,45.826,43.6654),
-  lon=c(-1.130,-1.2486,-1.4429)
-)
+#spots<-data.frame(
+ # id=c("aytre","saint_trojan","hossegor"),
+  #lat=c(46.1188,45.826,43.6654),
+  #lon=c(-1.130,-1.2486,-1.4429)
+#)
+spots<-read.csv(Spots.csv)
 # on s'assure qu'on est sur mer et pas sur terre
 spots$lon<-spots$lon-0.05
 points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
