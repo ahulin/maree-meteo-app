@@ -2,66 +2,132 @@
 "aytre",101274.5,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",101244.3125,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",101160.5,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",101152.6875,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",101874.25,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",101754.4375,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",0,"p","surface",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",2.98023223876953e-07,"p","surface",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",0.00227409601211548,"p","surface",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",0.00126940011978149,"p","surface",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",4.47630882263184e-05,"p","surface",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",0,"p","surface",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",6.24537420272827,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",6.30691289901733,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",3.6846137046814,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",3.87202215194702,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",2.47662114910781,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",5.18734502792358,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",288.13330078125,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",288.7138671875,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",287.45166015625,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",287.32763671875,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",278,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",287.90234375,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",286.970306396484,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",287.675384521484,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",285.879974365234,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",285.337493896484,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",276.197845458984,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",285.531829833984,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",-7.52978515625,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",-7.57809448242188,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",-2.82763671875,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",-1.23968505859375,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",-1.3121337890625,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",-6.07968139648438,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",-0.152511596679688,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",0.340118408203125,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",1.82394409179688,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",2.42465209960938,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",0.193710327148438,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",-0.439620971679688,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",-4.11654663085938,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",-4.28671264648438,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",-1.71102905273438,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",-0.758880615234375,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",-0.585540771484375,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",-2.65634155273438,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",-0.87860107421875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",-0.72625732421875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",0.76593017578125,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",1.66876220703125,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",-0.40667724609375,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",-0.66326904296875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",286.936828613281,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",287.651184082031,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",285.813781738281,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",285.282043457031,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",276.193664550781,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",285.423156738281,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",283.853332519531,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "saint_trojan",284.616516113281,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "hossegor",285.080383300781,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"biarritz",284.940246582031,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_andre_les_alpes",275.875793457031,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
+"saint_maur_des_fosses",274.567199707031,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10
 "aytre",101222.4375,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",101170,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",101057.25,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",101051.8125,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",101848.0625,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",101720.0625,"msl","meanSea",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",0.00112676620483398,"p","surface",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",0.00257986783981323,"p","surface",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",0.00227409601211548,"p","surface",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",0.00127208232879639,"p","surface",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",4.47630882263184e-05,"p","surface",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",0,"p","surface",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",5.25528717041016,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",5.65111541748047,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",4.34932708740234,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",4.59276580810547,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",4.14234161376953,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",5.30603790283203,"fg10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",286.937377929688,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",287.640014648438,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",285.823608398438,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",285.561401367188,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",276.435913085938,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",285.412475585938,"mx2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",286.171691894531,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",286.495422363281,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",285.144348144531,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",284.240051269531,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",275.818176269531,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",283.757141113281,"mn2t3","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",-2.38021850585938,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",-4.37884521484375,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",-3.96298217773438,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",-2.46588134765625,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",-2.96188354492188,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",-6.260009765625,"u100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",3.47007751464844,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",0.978469848632812,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",1.37974548339844,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",1.18461608886719,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",0.537750244140625,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",0.15283203125,"v100","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",-1.79278564453125,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",-3.33697509765625,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",-2.59820556640625,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",-1.67437744140625,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",-1.27545166015625,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",-2.79156494140625,"u10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",1.6824951171875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",0.1458740234375,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",0.9656982421875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",0.8592529296875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",-0.5584716796875,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",-0.4371337890625,"v10","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",286.135223388672,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",286.456512451172,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",285.188934326172,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",284.613250732422,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",276.327606201172,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",283.698211669922,"t2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "aytre",284.379852294922,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "saint_trojan",284.968231201172,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
 "hossegor",284.488739013672,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"biarritz",284.228485107422,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_andre_les_alpes",275.949676513672,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
+"saint_maur_des_fosses",274.913543701172,"d2m","heightAboveGround",NA,2025-05-09 18:00:00,2025-05-10 03:00:00
