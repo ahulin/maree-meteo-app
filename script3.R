@@ -4,13 +4,6 @@ library(reticulate)
 # 👉 Chemin vers le Python configuré dans GitHub Actions
 use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
 
-# Ensuite on importe le module copernicusmarine
-cmt <- import("copernicusmarine")
-
-#  Récupération des identifiants depuis les variables d'environnement GitHub Actions
-user <- Sys.getenv("CMEMS_USER")
-pwd  <- Sys.getenv("CMEMS_PWD")
-
 
 library(terra)
 
@@ -22,104 +15,72 @@ library(jsonlite)
 
 
 
-# Se connecter à Copernicus Marine
-cmt$login(user, pwd)
-
-#  Créer un dossier pour recevoir les fichiers
-dir.create("data_maree", showWarnings = FALSE)
-
-# les dates à telecharger
-date_min<-format(Sys.Date()-6,"%Y-%m-%dT00:00:00")
-date_max<-format(Sys.Date()+10,"%Y-%m-%dT23:00:00")
-
 # 📥 Téléchargement des données
-d<-cmt$subset(
-  dataset_id = "cmems_mod_ibi_phy_anfc_0.027deg-2D_PT1H-m",
-  #variables = list("mlotst", "thetao", "ubar", "uo", "vbar", "vo", "zos"),
-  variables = list("zos"),
-  minimum_longitude=-5.6566816,
-  maximum_longitude=0.5569,
-  minimum_latitude=42.2901,
-  maximum_latitude=49.8846,
-  start_datetime = date_min,
-  end_datetime   = date_max,
-  output_directory = "./data_maree"
-)
+
 
 cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
+spots<-read.table("Spots.csv",sep=";",header=TRUE)
 
-
-
-
-spots<-data.frame(
-  id=c("aytre","saint_trojan","hossegor"),
-  lat=c(46.1188,45.826,43.6654),
-  lon=c(-1.130,-1.2486,-1.4429)
-)
-# on s'assure qu'on est sur mer et pas sur terre
 spots$lon<-spots$lon-0.05
 points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
 
 
-# on cherche le fichier le plus récent
-fichs<-list.files("./data_maree")
-
-if (length(fichs) == 0) stop("❌ Aucun fichier NC trouvé dans /data_maree")
-
-ctime<-file.info(paste0("./data_maree/",fichs))$ctime
-fich<-fichs[ctime==max(ctime)]
-
-# Charger la variable 'zos' comme SpatRaster
-# variable zos : sea_surface_height_above_geoid
-zos_stack <- rast(paste0("./data_maree/",fich), subds = "zos")
-
-# Récupérer les coordonnées
-min_lon <- d$coordinates_extent[[1]]$minimum
-max_lon <- d$coordinates_extent[[1]]$maximum
-min_lat <- d$coordinates_extent[[2]]$minimum
-max_lat <- d$coordinates_extent[[2]]$maximum
-
-# Forcer le CRS
-crs(zos_stack) <- "EPSG:4326"
-
-# Forcer l'extent
-ext(zos_stack) <- c(min_lon, max_lon, min_lat, max_lat)
+#spots<-data.frame(
+#  id=c("aytre","saint_trojan","hossegor"),
+#lat=c(46.1188,45.826,43.6654),
+#  lon=c(-1.130,-1.2486,-1.4429)
+#)
+# on s'assure qu'on est sur mer et pas sur terre
 
 
-#construire la date
-datemin <- as.POSIXct(d$coordinates_extent[[3]]$minimum, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
-datemax <-  as.POSIXct(d$coordinates_extent[[3]]$maximum, format = "%Y-%m-%dT%H:%M:%S", tz = "UTC")
+source(maree_api_open_meteo.R)
 
-# puis conversion vers Europe/Paris
-datemin_paris <- format(datemin, tz = "Europe/Paris", usetz = TRUE)
-datemax_paris <- format(datemax, tz = "Europe/Paris", usetz = TRUE)
+
+# les dates à telecharger
+date_min<-format(Sys.Date()-6,"%Y-%m-%d")
+#date_max<-format(Sys.Date()+10,"%Y-%m-%dT23:00:00")
+df<-NULL
+for (s in 1:nrow (spots))
+{
+  ms<-NULL
+
+  ms<-get_maree_from_open_meteo(lon=spots[1,"lon"],lat=spots[1,"lat"],date_deb=date_min,njour=16)
+  ms$id<-spots[s,"id"]
+  df<-rbind(df,ms)
+}
 
 
 
-# Extraire les valeurs de chaque couche (temps) pour chaque point
-valeurs <- terra::extract(zos_stack, points_vect)
 
-# Ajouter l'identifiant pour retrouver à qui appartiennent les données
-valeurs$spot <- points_vect$id[valeurs$ID]
+df$jour<-substr(df$datetime,1,10)
+df$heure<-substr(df$datetime,12,13)
 
-library(tidyr)
-#data_long <- valeurs %>%
-#  pivot_longer(
-#    cols = -c(spot,ID), names_to = c("heure", "mesure"),
-#    names_sep = "[^[:alnum:]]+", values_to = "maree")
-#data_long$date<-rep(time(zos_stack),3)
+# calcul des coeff de maree
+dftide<-na.omit(df[,c("jour","id","tide_height")])
+mini<-aggregate(tide_height~jour+id,dftide,min,na.rm=TRUE)
+maxi<-aggregate(tide_height~jour+id,dftide,max,na.rm=TRUE)
+nb<-aggregate(tide_height~jour+id,dftide,length)
 
-data_long <- valeurs %>%
-  pivot_longer(
-    cols = -c(spot,ID), names_to = c("date_UTC"),
-    values_to = "maree")
-data_long$date_UTC<-rep(seq(datemin,datemax,by=60*60),3)
-data_long$date_paris<- format(data_long$date_UTC, tz = "Europe/Paris", usetz = TRUE)
+# calcul du coefficient de maree
+tide<-merge(maxi,mini,by=c("jour","id"))[nb$tide_height==24,]
+tide$amplitude<-tide$tide_height.x-tide$tide_height.y
+tide<-merge(tide,spots,by="id")
+tide$val<-round(tide$amplitude*70/tide$maree_median) # calcul du coeff
 
-data_long$jour<-substr(data_long$date_paris,1,10)
-data_long$heure<-substr(data_long$date_paris,12,13)
+tide$heure<-"00"
+tide$param<-"coeff_maree"
+tide$datetime<-paste(tide$jour,"T",tide$heure,":00")
 
+data_long <- pivot_longer(
+  df,
+  cols = -c(id, datetime,jour,heure),
+  names_to = "param",
+  values_to = "val"
+)
+
+
+data_long<-rbind(data_long,tide[,c("datetime","id","jour","heure","param","val")])
 #exporte le csv
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
 
