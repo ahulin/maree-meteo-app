@@ -34,7 +34,7 @@ points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
 # on s'assure qu'on est sur mer et pas sur terre
 
 
-source(maree_api_open_meteo.R)
+source("maree_api_open_meteo.R")
 
 
 # les dates à telecharger
