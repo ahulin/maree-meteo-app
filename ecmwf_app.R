@@ -233,9 +233,9 @@ if (is.null(date_run)) { # si la date n'est pas précisée, on prend l'echeance 
     dispo<-get_echeances_dispo(filiere,modele)
     if (!is.null(run_hour)) {
       dispo<-subset(dispo,heure_run ==run_hour)
-    } else {
-      dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
-      }
+    } #else {
+      #dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
+      #}
     dispo<-dispo[dispo$url==max(dispo$url),]
     date_run <- as.Date(dispo$date)
     run_hour<-dispo$heure_run
@@ -368,7 +368,7 @@ get_echeances_dispo<-function(filiere="ecpds",modele="ifs",type="oper")
       if (type=="oper") { type<-c("oper","scda")}
     }
 
-   liste_heure_run<-c("00" ,"12"  )
+   liste_heure_run<-c("00" ,"06","12","18"  )
 
     # Lire la page HTML
     page <- read_html(url)
