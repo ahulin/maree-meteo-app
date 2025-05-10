@@ -65,13 +65,13 @@ get_maree_from_open_meteo<-function(lon,lat,date_deb=NULL,njour=NULL)
 library(httr)
 library(jsonlite)
 library(dplyr)
-library(lubridate)
+
 
 
 
 if (is.null(date_deb))
 {
-  date_deb=format(Sys.Date()-5)
+  date_deb=format(Sys.Date()-5,"%Y-%m-%d")
   njour=15
 }
 
