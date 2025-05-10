@@ -58,7 +58,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
   #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer","isobaricInhPa","entireAtmosphere")
   #niveaux<-c("highCloudLayer","meanSea","mediumCloudLayer","surface","heightAboveGround","lowCloudLayer")
   #niveaux<-c("surface","entireAtmosphere","heightAboveGround","isobaricInhPa","meanSea","mostUnstableParcel","nominalTop","soilLayer")
-  niveaux=c("heightAboveGround","meanSea")
+  #niveaux=c("heightAboveGround","meanSea")
 
 
   data_points<-NULL
@@ -67,22 +67,52 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     print(paste0("niveau : ",niv))
     # on converti les fichiers par niveau en ncdf (l'étape précédente est nécessaire pour le faire)
     #system("grib_to_netcdf -D NC_FLOAT -o C:/TEMP/ICMGG_surface.nc C:/TEMP/ICMGG_surface.grb")
-    commande<-NULL
-    commande <- sprintf("grib_to_netcdf -D NC_FLOAT -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
 
-    message(commande)
+
+    if (niv!="surface")
+    {
+        commande<-NULL
     
-     res <- system(commande)
-     if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
+        commande <- sprintf("grib_to_netcdf -D  NC_FLOAT  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
+    
+        
+        res <- system(commande)
+        if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
+
+        # on lit le ncdf
+        netcdf_output<-sprintf("%s/ICMGG_%s.nc",
+                         destination_dir,niv)
+    } else if (niv=="surface")
+    {
+      # Liste des variables à extraire
+      shortnames <- c("tp")
       
-
-    
+      
+      # Boucle sur chaque variable
+      for (shortname in shortnames) {
+        #https://codes.ecmwf.int/grib/param-db/
+        # Chemins
+        grib_input <- file.path(destination_dir, sprintf("ICMGG_%s.grb", niv))
+        grib_filtered <- file.path(destination_dir, sprintf("ICMGG_%s_%s.grb", shortname, niv))
+        netcdf_output <- file.path(destination_dir, sprintf("ICMGG_%s_%s.nc", shortname, niv))
+        
+        # Étape 1 : extraire le champ par shortName
+        cmd_copy <- sprintf('"grib_copy" -w shortName=%s "%s" "%s"',
+                            shortname, grib_input, grib_filtered)
+        system(cmd_copy)
+        
+        # Étape 2 : conversion GRIB → NetCDF (avec séparation par step si nécessaire)
+        cmd_convert <- sprintf('"grib_to_netcdf" -D NC_FLOAT -S step -o "%s" "%s"',
+                                netcdf_output, grib_filtered)
+        system(cmd_convert)
+        
+        # Optionnel : nettoyage
+        # file.remove(grib_filtered)
+      }# fin de for
+      
+    }
   
-      # on lit le ncdf
-      fich_nc<-sprintf("%s/ICMGG_%s.nc",
-                       destination_dir,niv)
-  
-      nc<-nc_open(fich_nc)
+      nc<-nc_open(netcdf_output)
 
     tt<-strptime("1900-01-01 00:00:00","%Y-%m-%d %H:%M:%S")+ ncvar_get(nc, "time")*60*60
     #attributes(nc)$names
@@ -96,7 +126,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     # récupère les données au stations
     # en faire un raster
     
-    rj <-terra::rast(fich_nc)
+    rj <-terra::rast(netcdf_output)
     tmp_raster <- raster::stack(rj)
     
     # on gère le cas où il y a deux heure dans le fichier : on ne prend que la première. Vu pour le niveau "heightAboveGround"
@@ -203,9 +233,9 @@ if (is.null(date_run)) { # si la date n'est pas précisée, on prend l'echeance 
     dispo<-get_echeances_dispo(filiere,modele)
     if (!is.null(run_hour)) {
       dispo<-subset(dispo,heure_run ==run_hour)
-    } else {
-      dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
-      }
+    } #else {
+      #dispo<-subset(dispo,is.element(heure_run ,c("00","12")))
+      #}
     dispo<-dispo[dispo$url==max(dispo$url),]
     date_run <- as.Date(dispo$date)
     run_hour<-dispo$heure_run
@@ -338,7 +368,7 @@ get_echeances_dispo<-function(filiere="ecpds",modele="ifs",type="oper")
       if (type=="oper") { type<-c("oper","scda")}
     }
 
-   liste_heure_run<-c("00" ,"12"  )
+   liste_heure_run<-c("00" ,"06","12","18"  )
 
     # Lire la page HTML
     page <- read_html(url)
