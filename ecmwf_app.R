@@ -73,7 +73,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     {
         commande<-NULL
     
-        commande <- sprintf("grib_to_netcdf -D  NC_FLOAT -T  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
+        commande <- sprintf("grib_to_netcdf -D  NC_FLOAT  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
     
         
         res <- system(commande)
