@@ -18,7 +18,6 @@ library(jsonlite)
 # 📥 Téléchargement des données
 
 
-cat("✅ Données téléchargées dans le dossier /data_maree\n")
 
 spots<-read.table("Spots.csv",sep=";",header=TRUE)
 
