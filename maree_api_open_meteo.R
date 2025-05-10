@@ -1,22 +1,13 @@
-
-
-#' calcul_base_70
+ 
+#' geocode_place
 #'
-#' @param place ; as text
-#' @description fonction à lancer manuellement. Permet le calcul de la médiane sur un an des amplitudes de marées pour un site, 
-#' qui va correspondre à un coefficient de 70. Les résultats par site sont intégrés dans le fichier Spots.csv à a racine des scripts.
+#' @param place_name 
+#'
 #' @returns
 #' @export
 #'
-#'
 #' @examples
-#' calcul_base_70("Biarritz")
-calcul_base_70<-function(place)
-{
-  
-  
-  # Fonction : géocoder un nom de ville vers coordonnées
-  geocode_place <- function(place_name) {
+geocode_place <- function(place_name) {
     url <- paste0("https://geocoding-api.open-meteo.com/v1/search?name=", URLencode(place_name), "&count=1")
     res <- fromJSON(url)
     
@@ -25,26 +16,6 @@ calcul_base_70<-function(place)
     coords <- res$results[1, c("latitude", "longitude")]
     return(coords)
   }
-  
-r<-get_maree_from_open_meteo(lon=coords$longitude, lat=coords$latitude,format(Sys.Date()-365),365)
-
-
-#Et si tu connais l’amplitude typique d’un coefficient 70 pour ce lieu (A70), tu peux estimer :
-  
-#  coefficient_approximatif <- (amplitude / median(r$tide_height,na.rm=TRUE)  * 70
-
-r$jour<-substr(r$datetime,1,10)                          
-mini<-aggregate(tide_height ~jour,r,min,na.rm=TRUE)
-maxi<-aggregate(tide_height ~jour,r,max,na.rm=TRUE)
-rj<-merge(mini,maxi,by="jour")
-rj$ampli<-rj$tide_height.y-rj$tide_height.x
-
-#rj$coeff<-round((rj$ampli*70)/median(rj$ampli))
-
-return(median(rj$ampli))
-
-}
-
 
 #' get_maree_from_open_meteo
 #'
@@ -112,3 +83,41 @@ tide_df <- get_tide_data(lat=coords$latitude, lon=coords$longitude)
 write.csv(tide_df, paste0("tides_", gsub(" ", "_", tolower(place)), ".csv"), row.names = FALSE)
 return(tide_df)
 }
+
+
+
+#' calcul_base_70
+#'
+#' @param place ; as text
+#' @description fonction à lancer manuellement. Permet le calcul de la médiane sur un an des amplitudes de marées pour un site, 
+#' qui va correspondre à un coefficient de 70. Les résultats par site sont intégrés dans le fichier Spots.csv à a racine des scripts.
+#' @returns
+#' @export
+#'
+#'
+#' @examples
+#' calcul_base_70("Biarritz")
+calcul_base_70<-function(place)
+{
+  
+ 
+  
+r<-get_maree_from_open_meteo(lon=coords$longitude, lat=coords$latitude,format(Sys.Date()-365),365)
+
+
+#Et si tu connais l’amplitude typique d’un coefficient 70 pour ce lieu (A70), tu peux estimer :
+  
+#  coefficient_approximatif <- (amplitude / median(r$tide_height,na.rm=TRUE)  * 70
+
+r$jour<-substr(r$datetime,1,10)                          
+mini<-aggregate(tide_height ~jour,r,min,na.rm=TRUE)
+maxi<-aggregate(tide_height ~jour,r,max,na.rm=TRUE)
+rj<-merge(mini,maxi,by="jour")
+rj$ampli<-rj$tide_height.y-rj$tide_height.x
+
+#rj$coeff<-round((rj$ampli*70)/median(rj$ampli))
+
+return(median(rj$ampli))
+
+}
+
