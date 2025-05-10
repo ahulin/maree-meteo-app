@@ -73,7 +73,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     {
         commande<-NULL
     
-        commande <- sprintf("C:/Users/Agnes/miniconda3/Library/bin/grib_to_netcdf -D  NC_FLOAT -T  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
+        commande <- sprintf("grib_to_netcdf -D  NC_FLOAT -T  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
     
         
         res <- system(commande)
@@ -86,9 +86,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     {
       # Liste des variables à extraire
       shortnames <- c("tp")
-      niv <- "surface"
-      destination_dir <- "C:/TEMP"
-      eccodes_bin <- "C:/Users/Agnes/miniconda3/Library/bin"
+      
       
       # Boucle sur chaque variable
       for (shortname in shortnames) {
@@ -99,13 +97,13 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
         netcdf_output <- file.path(destination_dir, sprintf("ICMGG_%s_%s.nc", shortname, niv))
         
         # Étape 1 : extraire le champ par shortName
-        cmd_copy <- sprintf('"%s/grib_copy" -w shortName=%s "%s" "%s"',
-                            eccodes_bin, shortname, grib_input, grib_filtered)
+        cmd_copy <- sprintf('"grib_copy" -w shortName=%s "%s" "%s"',
+                            shortname, grib_input, grib_filtered)
         system(cmd_copy)
         
         # Étape 2 : conversion GRIB → NetCDF (avec séparation par step si nécessaire)
-        cmd_convert <- sprintf('"%s/grib_to_netcdf" -D NC_FLOAT -S step -o "%s" "%s"',
-                               eccodes_bin, netcdf_output, grib_filtered)
+        cmd_convert <- sprintf('"grib_to_netcdf" -D NC_FLOAT -S step -o "%s" "%s"',
+                                netcdf_output, grib_filtered)
         system(cmd_convert)
         
         # Optionnel : nettoyage
