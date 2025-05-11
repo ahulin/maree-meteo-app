@@ -2,7 +2,11 @@ name: Script quotidien marée et météo
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Tous les jours à 6h UTC
+    - cron: '0 0 * * *'   # Tous les jours à 0h UTC
+    - cron: '0 5 * * *'   # Tous les jours à 5h UTC
+    - cron: '0 11 * * *'  # Tous les jours à 11h UTC
+    - cron: '0 15 * * *'  # Tous les jours à 15h UTC
+    - cron: '0 20 * * *'  # Tous les jours à 20h UTC
   workflow_dispatch:
 
 jobs:
