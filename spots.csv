@@ -1,5 +1,5 @@
-nom,id,lon,lat,maree_median,maree_min,maree_max
-Aytre,aytre,-1.13,46.1188,3.59,-3.65,2.42
+"nom","id","lon","lat","maree_median","maree_min","maree_max"
+"Aytre","aytre",-1.13,46.1188,3.59,-3.65,2.42
 Saint Trojan,saint_trojan,-1.2486,45.826,4.295,-4.04,2.88
 Hossegor,hossegor,-1.4429,43.6654,2.81,-2.74,2.04
 Biarritz,biarritz,-1.55684,43.48055,2.795,-2.74,2.04
