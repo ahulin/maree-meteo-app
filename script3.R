@@ -19,7 +19,7 @@ library(jsonlite)
 
 
 
-spots<-read.table("spots.csv",sep=";",header=TRUE)
+spots<-read.table("spots.csv",sep=",",header=TRUE)
 
 spots$lon<-spots$lon-0.05
 points_vect <- vect(spots, geom = c("lon", "lat"), crs = "EPSG:4326")
