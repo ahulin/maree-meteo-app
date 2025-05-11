@@ -44,7 +44,7 @@ for (s in 1:nrow (spots))
 {
   ms<-NULL
 
-  ms<-get_maree_from_open_meteo(lon=spots[1,"lon"],lat=spots[1,"lat"],date_deb=date_min,njour=16)
+  ms<-get_maree_from_open_meteo(lon=spots[s,"lon"],lat=spots[s,"lat"],date_deb=date_min,njour=16)
   ms$id<-spots[s,"id"]
   df<-rbind(df,ms)
 }
