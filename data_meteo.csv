@@ -35,14 +35,14 @@
 "saint_trojan",-2.44075012207031,"v10","heightAboveGround",NA,2025-05-14,2025-05-14
 "hossegor",-1.87020874023438,"v10","heightAboveGround",NA,2025-05-14,2025-05-14
 "biarritz",-2.72683715820312,"v10","heightAboveGround",NA,2025-05-14,2025-05-14
-"aytre",-2.5819091796875,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"saint_trojan",-2.44075012207031,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"hossegor",-1.87020874023438,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"biarritz",-2.72683715820312,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"aytre",-3.81681823730469,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"saint_trojan",-3.81584167480469,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"hossegor",4.38363647460938,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
-"biarritz",0.714645385742188,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"aytre",NA,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"saint_trojan",NA,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"hossegor",NA,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"biarritz",NA,"t2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"aytre",NA,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"saint_trojan",NA,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"hossegor",NA,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
+"biarritz",NA,"d2m","heightAboveGround",NA,2025-05-14,2025-05-14
 "aytre",101575.9375,"msl","meanSea",NA,2025-05-14,2025-05-14 03:00:00
 "saint_trojan",101562.0625,"msl","meanSea",NA,2025-05-14,2025-05-14 03:00:00
 "hossegor",101460.875,"msl","meanSea",NA,2025-05-14,2025-05-14 03:00:00
