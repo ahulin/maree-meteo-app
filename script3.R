@@ -237,7 +237,8 @@ nheure<-135
        data_h$date_ech<-data_h$date_run+h*60*60
        data<-rbind(data,data_h)
      }
-     
+     # récparation temporaire, probleme à mieux regler : Il y a des température sur les premières heures des runs tardfis qui donnent des valeurs en °C au mieu de °K
+     data[(data$param=="t2m"|data$param=="d2m")&data$val<100,"val"]<-NA
      write.csv(data,"data_meteo.csv",row.names=FALSE)
      if(file.exists("data_meteo.csv")) { print("Le fichier data_meteo.csv a ete correctement cree") }
 
