@@ -6,7 +6,6 @@ on:
     - cron: '0 5 * * *'   # Tous les jours à 5h UTC
     - cron: '0 10 * * *'  # Tous les jours à 10h UTC
     - cron: '0 15 * * *'  # Tous les jours à 15h UTC
-    - cron: '0 20 * * *'  # Tous les jours à 20h UTC
   workflow_dispatch:
 
 jobs:
