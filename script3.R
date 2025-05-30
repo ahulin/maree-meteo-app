@@ -225,7 +225,7 @@ nheure<-135
        
        # on fait l'extraction au niveau des points des stations
        # niveaux_<-c("highCloudLayer","meanSea","mediumCloudLayer","soilLayer","surface","heightAboveGround","lowCloudLayer")
-       niveaux_<-c("meanSea","surface","heightAboveGround")
+       niveaux_<-c("meanSea","surface","heightAboveGround","isobaricInhPa")
        # Forcer le chemin vers eccodes sous GitHub Actions
 
 
