@@ -110,6 +110,34 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
         # file.remove(grib_filtered)
       }# fin de for
       
+    } else if (niv=="isobaricInhPa")
+    {
+      # Liste des variables à extraire
+      shortnames <- c("w","r","vo")
+      
+      
+      # Boucle sur chaque variable
+      for (shortname in shortnames) {
+        #https://codes.ecmwf.int/grib/param-db/
+        # Chemins
+        grib_input <- file.path(destination_dir, sprintf("ICMGG_%s.grb", niv))
+        grib_filtered <- file.path(destination_dir, sprintf("ICMGG_%s_%s.grb", shortname, niv))
+        netcdf_output <- file.path(destination_dir, sprintf("ICMGG_%s_%s.nc", shortname, niv))
+        
+        # Étape 1 : extraire le champ par shortName
+        cmd_copy <- sprintf('"grib_copy" -w shortName=%s "%s" "%s"',
+                            shortname, grib_input, grib_filtered)
+        system(cmd_copy)
+        
+        # Étape 2 : conversion GRIB → NetCDF (avec séparation par step si nécessaire)
+        cmd_convert <- sprintf('"grib_to_netcdf" -D NC_FLOAT -S step -o "%s" "%s"',
+                                netcdf_output, grib_filtered)
+        system(cmd_convert)
+        
+        # Optionnel : nettoyage
+        # file.remove(grib_filtered)
+      }# fin de for
+      
     }
   
       nc<-nc_open(netcdf_output)
