@@ -69,20 +69,7 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
     #system("grib_to_netcdf -D NC_FLOAT -o C:/TEMP/ICMGG_surface.nc C:/TEMP/ICMGG_surface.grb")
 
 
-    if (niv!="surface")
-    {
-        commande<-NULL
-    
-        commande <- sprintf("grib_to_netcdf -D  NC_FLOAT  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
-    
-        
-        res <- system(commande)
-        if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
-
-        # on lit le ncdf
-        netcdf_output<-sprintf("%s/ICMGG_%s.nc",
-                         destination_dir,niv)
-    } else if (niv=="surface")
+    if (niv=="surface")
     {
       # Liste des variables à extraire
       shortnames <- c("tp")
@@ -138,7 +125,20 @@ traitement_grb2ecmwf<-function(grib2_file,points,domaine=c(-6.5, 10.3, 40.1, 51.
         # file.remove(grib_filtered)
       }# fin de for
       
-    }
+    } else
+    {
+        commande<-NULL
+    
+        commande <- sprintf("grib_to_netcdf -D  NC_FLOAT  -o %s/ICMGG_%s.nc %s/ICMGG_%s.grb", destination_dir, niv, destination_dir, niv)
+    
+        
+        res <- system(commande)
+        if (res != 0) stop("❌ Erreur dans grib_to_netcdf")
+
+        # on lit le ncdf
+        netcdf_output<-sprintf("%s/ICMGG_%s.nc",
+                         destination_dir,niv)
+    } 
   
       nc<-nc_open(netcdf_output)
 
