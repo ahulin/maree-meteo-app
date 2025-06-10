@@ -80,6 +80,14 @@ data_long <- pivot_longer(
 
 
 data_long<-rbind(data_long,tide[,c("datetime","id","jour","heure","param","val")])
+
+#conversion des dates en date de paris
+data_long$datetime<-as.POSIXct(data_long$datetime,"%Y-%m-%dT%H:%M",tz="GMT")
+data_long$datetime<- format(data_long$datetime,"%Y-%m-%dT%H:%M", tz = "Europe/Paris", usetz = TRUE)
+data_long$jour<-substr(data_long$datetime,1,10)
+data_long$heure<-substr(data_long$datetime,12,13)
+
+
 #exporte le csv
 write.csv(data_long,"zos_points.csv",row.names=FALSE)
 
