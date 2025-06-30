@@ -2,7 +2,8 @@
 library(reticulate)
 
 # 👉 Chemin vers le Python configuré dans GitHub Actions
-use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
+reticulate::use_python(Sys.which("python"), required = TRUE)
+#use_python("/opt/hostedtoolcache/Python/3.10.17/x64/bin/python", required = TRUE)
 
 
 library(terra)
