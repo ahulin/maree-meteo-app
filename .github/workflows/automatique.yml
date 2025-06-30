@@ -1,12 +1,12 @@
 name: Script quotidien marée et météo
 
-#on:
-#  schedule:
-#    - cron: '0 0 * * *'   # Tous les jours à 0h UTC
-#    - cron: '0 5 * * *'   # Tous les jours à 5h UTC
-#    - cron: '0 10 * * *'  # Tous les jours à 10h UTC
-#    - cron: '0 15 * * *'  # Tous les jours à 15h UTC
-#  workflow_dispatch:
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    - cron: '0 5 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 15 * * *'
+  workflow_dispatch:
 
 jobs:
   run-script:
@@ -25,6 +25,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
+      - name: Vérifier la version et le chemin Python
+        run: |
+          which python
+          python --version
 
       - name: Installer les dépendances système pour R
         run: |
@@ -70,8 +75,6 @@ jobs:
           CMEMS_PWD: ${{ secrets.CMEMS_PWD }}
         run: Rscript script3.R
 
-      # …vos étapes précédentes (checkout, génération des CSV, etc.)…
-
       - name: Commit des fichiers CSV générés
         run: |
           git config --global user.name "github-actions"
@@ -95,4 +98,3 @@ jobs:
           git commit -m "Mise à jour quotidienne des CSV : hauteurs de mer et données météo" \
             || echo "Pas de changement"
           git push
-
